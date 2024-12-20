@@ -94,7 +94,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            label3.Location = new Point(252, 68);
+            label3.Location = new Point(253, 80);
             label3.Name = "label3";
             label3.Size = new Size(98, 32);
             label3.TabIndex = 2;
@@ -102,14 +102,14 @@
             // 
             // login_UserName
             // 
-            login_UserName.Location = new Point(252, 179);
+            login_UserName.Location = new Point(253, 144);
             login_UserName.Name = "login_UserName";
             login_UserName.Size = new Size(317, 23);
             login_UserName.TabIndex = 3;
             // 
             // login_Password
             // 
-            login_Password.Location = new Point(252, 248);
+            login_Password.Location = new Point(253, 213);
             login_Password.Name = "login_Password";
             login_Password.Size = new Size(317, 23);
             login_Password.TabIndex = 4;
@@ -117,7 +117,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(252, 161);
+            label4.Location = new Point(253, 126);
             label4.Name = "label4";
             label4.Size = new Size(111, 15);
             label4.TabIndex = 5;
@@ -126,7 +126,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(252, 230);
+            label5.Location = new Point(253, 195);
             label5.Name = "label5";
             label5.Size = new Size(37, 15);
             label5.TabIndex = 6;
@@ -135,7 +135,7 @@
             // login_Button
             // 
             login_Button.BackColor = SystemColors.ButtonFace;
-            login_Button.Location = new Point(252, 302);
+            login_Button.Location = new Point(253, 267);
             login_Button.Name = "login_Button";
             login_Button.Size = new Size(322, 40);
             login_Button.TabIndex = 7;
@@ -145,17 +145,18 @@
             // login_SignUp
             // 
             login_SignUp.BackColor = SystemColors.ButtonFace;
-            login_SignUp.Location = new Point(252, 348);
+            login_SignUp.Location = new Point(253, 313);
             login_SignUp.Name = "login_SignUp";
             login_SignUp.Size = new Size(322, 40);
             login_SignUp.TabIndex = 8;
             login_SignUp.Text = "Rejestracja";
             login_SignUp.UseVisualStyleBackColor = false;
+            login_SignUp.Click += login_SignUp_Click;
             // 
             // login_showPass
             // 
             login_showPass.AutoSize = true;
-            login_showPass.Location = new Point(486, 277);
+            login_showPass.Location = new Point(487, 242);
             login_showPass.Name = "login_showPass";
             login_showPass.Size = new Size(88, 19);
             login_showPass.TabIndex = 9;
@@ -180,6 +181,7 @@
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

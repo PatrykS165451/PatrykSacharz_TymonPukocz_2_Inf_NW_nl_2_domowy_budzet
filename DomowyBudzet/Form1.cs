@@ -7,9 +7,14 @@ namespace DomowyBudzet
             InitializeComponent();
         }
 
-        private void Close_Click (object sender, EventArgs e)
+        private void Close_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void login_SignUp_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
