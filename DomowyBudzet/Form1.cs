@@ -14,7 +14,9 @@ namespace DomowyBudzet
 
         private void login_SignUp_Click(object sender, EventArgs e)
         {
-            
+            SignupForm signupForm = new SignupForm();
+            signupForm.Show();
+            Hide();
         }
     }
 }

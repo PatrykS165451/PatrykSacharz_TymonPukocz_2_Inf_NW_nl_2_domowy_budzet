@@ -111,6 +111,7 @@
             // 
             login_Password.Location = new Point(253, 213);
             login_Password.Name = "login_Password";
+            login_Password.PasswordChar = '*';
             login_Password.Size = new Size(317, 23);
             login_Password.TabIndex = 4;
             // 
@@ -145,7 +146,7 @@
             // login_SignUp
             // 
             login_SignUp.BackColor = SystemColors.ButtonFace;
-            login_SignUp.Location = new Point(253, 313);
+            login_SignUp.Location = new Point(253, 321);
             login_SignUp.Name = "login_SignUp";
             login_SignUp.Size = new Size(322, 40);
             login_SignUp.TabIndex = 8;

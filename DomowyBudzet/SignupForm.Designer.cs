@@ -85,6 +85,7 @@
             signup_showPass.TabIndex = 19;
             signup_showPass.Text = "Pokaż hasło";
             signup_showPass.UseVisualStyleBackColor = true;
+            signup_showPass.CheckedChanged += signup_showPass_CheckedChanged;
             // 
             // signup_Btn
             // 
@@ -95,6 +96,7 @@
             signup_Btn.TabIndex = 18;
             signup_Btn.Text = "Rejestracja";
             signup_Btn.UseVisualStyleBackColor = false;
+            signup_Btn.Click += signup_Btn_Click;
             // 
             // label5
             // 
@@ -118,6 +120,7 @@
             // 
             signup_Password.Location = new Point(253, 213);
             signup_Password.Name = "signup_Password";
+            signup_Password.PasswordChar = '*';
             signup_Password.Size = new Size(317, 23);
             signup_Password.TabIndex = 14;
             // 
@@ -146,11 +149,11 @@
             signup_Close.Cursor = Cursors.Hand;
             signup_Close.FlatStyle = FlatStyle.Flat;
             signup_Close.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            signup_Close.Location = new Point(774, 9);
+            signup_Close.Location = new Point(726, 9);
             signup_Close.Name = "signup_Close";
-            signup_Close.Size = new Size(21, 22);
+            signup_Close.Size = new Size(62, 22);
             signup_Close.TabIndex = 11;
-            signup_Close.Text = "X";
+            signup_Close.Text = "Powrót";
             signup_Close.Click += signup_Close_Click;
             // 
             // label1
@@ -166,6 +169,8 @@
             // 
             signup_PassConfirm.Location = new Point(253, 279);
             signup_PassConfirm.Name = "signup_PassConfirm";
+            signup_PassConfirm.PasswordChar = '*';
+            signup_PassConfirm.ShortcutsEnabled = false;
             signup_PassConfirm.Size = new Size(317, 23);
             signup_PassConfirm.TabIndex = 20;
             // 
@@ -173,6 +178,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Window;
             ClientSize = new Size(800, 450);
             Controls.Add(label1);
             Controls.Add(signup_PassConfirm);
