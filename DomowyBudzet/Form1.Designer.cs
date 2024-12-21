@@ -142,6 +142,7 @@
             login_Button.TabIndex = 7;
             login_Button.Text = "Logowanie";
             login_Button.UseVisualStyleBackColor = false;
+            login_Button.Click += login_Button_Click;
             // 
             // login_SignUp
             // 
@@ -163,6 +164,7 @@
             login_showPass.TabIndex = 9;
             login_showPass.Text = "Pokaż hasło";
             login_showPass.UseVisualStyleBackColor = true;
+            login_showPass.CheckedChanged += login_showPass_CheckedChanged;
             // 
             // Form1
             // 
