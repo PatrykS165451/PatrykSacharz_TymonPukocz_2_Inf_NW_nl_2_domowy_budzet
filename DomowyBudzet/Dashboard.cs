@@ -21,5 +21,10 @@ namespace DomowyBudzet
         {
 
         }
+
+        private void Close_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
