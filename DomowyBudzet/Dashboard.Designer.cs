@@ -38,6 +38,7 @@
             Dashboard_Button = new Button();
             Expense_Button = new Button();
             Income_Button = new Button();
+            panel3 = new Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picLogo).BeginInit();
             panel2.SuspendLayout();
@@ -192,11 +193,19 @@
             Income_Button.UseVisualStyleBackColor = false;
             Income_Button.Click += button1_Click;
             // 
+            // panel3
+            // 
+            panel3.Location = new Point(225, 65);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(1029, 558);
+            panel3.TabIndex = 2;
+            // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1266, 635);
+            Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
@@ -221,5 +230,6 @@
         private Button Dashboard_Button;
         private Button Category_Button;
         private Button Expense_Button;
+        private Panel panel3;
     }
 }
