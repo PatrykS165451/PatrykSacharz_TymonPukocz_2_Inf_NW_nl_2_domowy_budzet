@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace DomowyBudzet
 {
-    public partial class DashboardForm : UserControl
+    public partial class CategoryForm : UserControl
     {
-        public DashboardForm()
+        public CategoryForm()
         {
             InitializeComponent();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

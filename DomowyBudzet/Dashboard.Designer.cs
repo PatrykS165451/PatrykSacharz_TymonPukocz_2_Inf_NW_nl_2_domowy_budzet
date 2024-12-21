@@ -127,7 +127,7 @@
             Category_Button.FlatAppearance.BorderSize = 0;
             Category_Button.FlatAppearance.MouseOverBackColor = Color.WhiteSmoke;
             Category_Button.FlatStyle = FlatStyle.Flat;
-            Category_Button.Font = new Font("Segoe UI", 9.75F);
+            Category_Button.Font = new Font("Segoe UI", 11.25F);
             Category_Button.Image = Properties.Resources.Plus;
             Category_Button.ImageAlign = ContentAlignment.MiddleLeft;
             Category_Button.Location = new Point(13, 156);
@@ -145,7 +145,7 @@
             Dashboard_Button.FlatAppearance.BorderSize = 0;
             Dashboard_Button.FlatAppearance.MouseOverBackColor = Color.WhiteSmoke;
             Dashboard_Button.FlatStyle = FlatStyle.Flat;
-            Dashboard_Button.Font = new Font("Segoe UI", 9.75F);
+            Dashboard_Button.Font = new Font("Segoe UI", 11.25F);
             Dashboard_Button.Image = Properties.Resources.Summary;
             Dashboard_Button.ImageAlign = ContentAlignment.MiddleLeft;
             Dashboard_Button.Location = new Point(13, 78);
@@ -163,7 +163,7 @@
             Expense_Button.FlatAppearance.BorderSize = 0;
             Expense_Button.FlatAppearance.MouseOverBackColor = Color.WhiteSmoke;
             Expense_Button.FlatStyle = FlatStyle.Flat;
-            Expense_Button.Font = new Font("Segoe UI", 9.75F);
+            Expense_Button.Font = new Font("Segoe UI", 11.25F);
             Expense_Button.Image = Properties.Resources.expense;
             Expense_Button.ImageAlign = ContentAlignment.MiddleLeft;
             Expense_Button.Location = new Point(13, 289);
@@ -181,7 +181,7 @@
             Income_Button.FlatAppearance.BorderSize = 0;
             Income_Button.FlatAppearance.MouseOverBackColor = Color.WhiteSmoke;
             Income_Button.FlatStyle = FlatStyle.Flat;
-            Income_Button.Font = new Font("Segoe UI", 9.75F);
+            Income_Button.Font = new Font("Segoe UI", 11.25F);
             Income_Button.Image = Properties.Resources.income;
             Income_Button.ImageAlign = ContentAlignment.MiddleLeft;
             Income_Button.Location = new Point(13, 224);
