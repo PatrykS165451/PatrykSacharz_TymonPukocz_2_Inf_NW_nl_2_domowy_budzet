@@ -39,9 +39,11 @@
             Expense_Button = new Button();
             Income_Button = new Button();
             panel3 = new Panel();
+            categoryForm1 = new CategoryForm();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picLogo).BeginInit();
             panel2.SuspendLayout();
+            panel3.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -119,7 +121,7 @@
             Logout_Button.TabIndex = 2;
             Logout_Button.Text = "Wyloguj";
             Logout_Button.UseVisualStyleBackColor = false;
-            Logout_Button.Click += button1_Click;
+            Logout_Button.Click += Logout_Button_Click;
             // 
             // Category_Button
             // 
@@ -137,7 +139,7 @@
             Category_Button.Text = "Dodaj kategorię";
             Category_Button.TextAlign = ContentAlignment.MiddleRight;
             Category_Button.UseVisualStyleBackColor = false;
-            Category_Button.Click += button1_Click;
+            Category_Button.Click += Category_Button_Click;
             // 
             // Dashboard_Button
             // 
@@ -155,7 +157,7 @@
             Dashboard_Button.Text = "Podsumowanie";
             Dashboard_Button.TextAlign = ContentAlignment.MiddleRight;
             Dashboard_Button.UseVisualStyleBackColor = false;
-            Dashboard_Button.Click += button1_Click;
+            Dashboard_Button.Click += Dashboard_Button_Click;
             // 
             // Expense_Button
             // 
@@ -173,7 +175,7 @@
             Expense_Button.Text = "Wydatki";
             Expense_Button.TextAlign = ContentAlignment.MiddleRight;
             Expense_Button.UseVisualStyleBackColor = false;
-            Expense_Button.Click += button1_Click;
+            Expense_Button.Click += Expense_Button_Click;
             // 
             // Income_Button
             // 
@@ -191,14 +193,22 @@
             Income_Button.Text = "Przychody";
             Income_Button.TextAlign = ContentAlignment.MiddleRight;
             Income_Button.UseVisualStyleBackColor = false;
-            Income_Button.Click += button1_Click;
+            Income_Button.Click += Income_Button_Click;
             // 
             // panel3
             // 
+            panel3.Controls.Add(categoryForm1);
             panel3.Location = new Point(225, 65);
             panel3.Name = "panel3";
             panel3.Size = new Size(1029, 558);
             panel3.TabIndex = 2;
+            // 
+            // categoryForm1
+            // 
+            categoryForm1.Location = new Point(0, 0);
+            categoryForm1.Name = "categoryForm1";
+            categoryForm1.Size = new Size(1029, 558);
+            categoryForm1.TabIndex = 0;
             // 
             // Dashboard
             // 
@@ -215,6 +225,7 @@
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picLogo).EndInit();
             panel2.ResumeLayout(false);
+            panel3.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -231,5 +242,6 @@
         private Button Category_Button;
         private Button Expense_Button;
         private Panel panel3;
+        private CategoryForm categoryForm1;
     }
 }
