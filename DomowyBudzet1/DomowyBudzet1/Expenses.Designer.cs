@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Expenses));
             panel1 = new Panel();
-            pictureBox2 = new PictureBox();
-            pictureBox5 = new PictureBox();
+            ExpenseBtn = new PictureBox();
+            DashboardBtn = new PictureBox();
+            LogoutBtn = new PictureBox();
+            IncomeBtn = new PictureBox();
             pictureBox7 = new PictureBox();
             pictureBox4 = new PictureBox();
-            pictureBox3 = new PictureBox();
-            pictureBox1 = new PictureBox();
             panel2 = new Panel();
             label7 = new Label();
             textBox1 = new TextBox();
@@ -56,12 +56,12 @@
             label6 = new Label();
             label8 = new Label();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ExpenseBtn).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)DashboardBtn).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)LogoutBtn).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)IncomeBtn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -70,35 +70,54 @@
             // panel1
             // 
             panel1.BackColor = Color.White;
-            panel1.Controls.Add(pictureBox2);
-            panel1.Controls.Add(pictureBox5);
+            panel1.Controls.Add(ExpenseBtn);
+            panel1.Controls.Add(DashboardBtn);
+            panel1.Controls.Add(LogoutBtn);
+            panel1.Controls.Add(IncomeBtn);
             panel1.Controls.Add(pictureBox7);
             panel1.Controls.Add(pictureBox4);
-            panel1.Controls.Add(pictureBox3);
-            panel1.Controls.Add(pictureBox1);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(84, 811);
             panel1.TabIndex = 0;
             // 
-            // pictureBox2
+            // ExpenseBtn
             // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(12, 342);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(59, 55);
-            pictureBox2.TabIndex = 1;
-            pictureBox2.TabStop = false;
+            ExpenseBtn.Image = (Image)resources.GetObject("ExpenseBtn.Image");
+            ExpenseBtn.Location = new Point(12, 340);
+            ExpenseBtn.Name = "ExpenseBtn";
+            ExpenseBtn.Size = new Size(59, 55);
+            ExpenseBtn.TabIndex = 7;
+            ExpenseBtn.TabStop = false;
             // 
-            // pictureBox5
+            // DashboardBtn
             // 
-            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(12, 744);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(59, 55);
-            pictureBox5.TabIndex = 1;
-            pictureBox5.TabStop = false;
+            DashboardBtn.Image = (Image)resources.GetObject("DashboardBtn.Image");
+            DashboardBtn.Location = new Point(12, 110);
+            DashboardBtn.Name = "DashboardBtn";
+            DashboardBtn.Size = new Size(59, 55);
+            DashboardBtn.TabIndex = 8;
+            DashboardBtn.TabStop = false;
+            // 
+            // LogoutBtn
+            // 
+            LogoutBtn.Image = (Image)resources.GetObject("LogoutBtn.Image");
+            LogoutBtn.Location = new Point(12, 744);
+            LogoutBtn.Name = "LogoutBtn";
+            LogoutBtn.Size = new Size(59, 55);
+            LogoutBtn.TabIndex = 1;
+            LogoutBtn.TabStop = false;
+            LogoutBtn.Click += LogoutBtn_Click;
+            // 
+            // IncomeBtn
+            // 
+            IncomeBtn.Image = (Image)resources.GetObject("IncomeBtn.Image");
+            IncomeBtn.Location = new Point(12, 456);
+            IncomeBtn.Name = "IncomeBtn";
+            IncomeBtn.Size = new Size(59, 55);
+            IncomeBtn.TabIndex = 9;
+            IncomeBtn.TabStop = false;
             // 
             // pictureBox7
             // 
@@ -118,24 +137,6 @@
             pictureBox4.Size = new Size(59, 55);
             pictureBox4.TabIndex = 1;
             pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(12, 112);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(59, 55);
-            pictureBox3.TabIndex = 1;
-            pictureBox3.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(12, 458);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(59, 55);
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -362,12 +363,12 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ExpenseBtn).EndInit();
+            ((System.ComponentModel.ISupportInitialize)DashboardBtn).EndInit();
+            ((System.ComponentModel.ISupportInitialize)LogoutBtn).EndInit();
+            ((System.ComponentModel.ISupportInitialize)IncomeBtn).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
@@ -379,11 +380,8 @@
         #endregion
 
         private Panel panel1;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox5;
+        private PictureBox LogoutBtn;
         private PictureBox pictureBox4;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox1;
         private Panel panel2;
         private TextBox textBox1;
         private Label label1;
@@ -404,5 +402,8 @@
         private PictureBox pictureBox7;
         private Label label7;
         private Label label8;
+        private PictureBox ExpenseBtn;
+        private PictureBox DashboardBtn;
+        private PictureBox IncomeBtn;
     }
 }
