@@ -89,6 +89,7 @@
             Category_DelBtn.TabIndex = 0;
             Category_DelBtn.Text = "Usuń";
             Category_DelBtn.UseVisualStyleBackColor = false;
+            Category_DelBtn.Click += Category_DelBtn_Click;
             // 
             // Category_EdtBtn
             // 

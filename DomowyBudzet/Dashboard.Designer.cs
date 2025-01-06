@@ -40,6 +40,7 @@
             Income_Button = new Button();
             panel3 = new Panel();
             categoryForm1 = new CategoryForm();
+            incomeForm1 = new IncomeForm();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picLogo).BeginInit();
             panel2.SuspendLayout();
@@ -197,6 +198,7 @@
             // 
             // panel3
             // 
+            panel3.Controls.Add(incomeForm1);
             panel3.Controls.Add(categoryForm1);
             panel3.Location = new Point(225, 65);
             panel3.Name = "panel3";
@@ -209,6 +211,13 @@
             categoryForm1.Name = "categoryForm1";
             categoryForm1.Size = new Size(1029, 558);
             categoryForm1.TabIndex = 0;
+            // 
+            // incomeForm1
+            // 
+            incomeForm1.Location = new Point(-3, 0);
+            incomeForm1.Name = "incomeForm1";
+            incomeForm1.Size = new Size(1045, 573);
+            incomeForm1.TabIndex = 6;
             // 
             // Dashboard
             // 
@@ -243,5 +252,6 @@
         private Button Expense_Button;
         private Panel panel3;
         private CategoryForm categoryForm1;
+        private IncomeForm incomeForm1;
     }
 }

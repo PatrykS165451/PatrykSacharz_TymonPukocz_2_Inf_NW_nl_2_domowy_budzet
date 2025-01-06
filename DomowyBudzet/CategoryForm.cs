@@ -18,16 +18,18 @@ namespace DomowyBudzet
         {
             InitializeComponent();
 
-            //displayCategories();
+            displayCategories();
         }
 
         //Mam problem z poniższą metodą, po zalogowaniu się wypluwa problem z SQLem. 1:20:00
 
         public void displayCategories()
         {
-            CategoryData categoryData = new CategoryData();
-            List<CategoryData> categories = categoryData.GetCategories();
-            Category_GridView.DataSource = categories;
+            CategoryData cData = new CategoryData();
+            List<CategoryData> listData = cData.GetCategories();
+            Category_GridView.DataSource = listData;
+
+            Category_GridView.Columns["Date"].DefaultCellStyle.Format = "MM-dd-yyyy";
         }
 
         private void Category_AddBtn_Click(object sender, EventArgs e)
@@ -116,12 +118,43 @@ namespace DomowyBudzet
         {
             Category_TxtBox.Text = "";
             Category_CmbBox.SelectedIndex = -1;
-            
+
         }
 
         private void Category_ClrBtn_Click(object sender, EventArgs e)
         {
             clearFields();
+        }
+
+        private void Category_DelBtn_Click(object sender, EventArgs e)
+        {
+            if (Category_TxtBox.Text == "" || Category_CmbBox.SelectedIndex == -1)
+            {
+                MessageBox.Show("Proszę wybrać kategorię.", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                if (MessageBox.Show("Czy na pewno chcesz usunąć kategorię o nr: " + getID + "?", "Usuń", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    using (SqlConnection connect = new SqlConnection(stringConnection))
+                    {
+                        connect.Open();
+                        string updateData = "DELETE FROM categories WHERE id = @id";
+                        using (SqlCommand cmd = new SqlCommand(updateData, connect))
+                        {
+                            cmd.Parameters.AddWithValue("id", getID);
+                            
+                            cmd.ExecuteNonQuery();
+                            clearFields();
+
+                            MessageBox.Show("Pomyślnie usunięto.", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+
+                        connect.Close();
+                    }
+                }
+            }
+            displayCategories();
         }
     }
 }

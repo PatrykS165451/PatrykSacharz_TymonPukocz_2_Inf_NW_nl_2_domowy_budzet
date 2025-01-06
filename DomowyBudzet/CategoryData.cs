@@ -21,7 +21,7 @@ namespace DomowyBudzet
         //poniższa metoda łączy się z bazą danych i dodaje do niej nową kategorię (nazwa, typ, data dodania)
         public List<CategoryData> GetCategories()
         {
-            List<CategoryData> categories = new List<CategoryData>();
+            List<CategoryData> listData = new List<CategoryData>();
             using (SqlConnection connect = new SqlConnection(stringConnection))
             {
                 connect.Open();
@@ -32,17 +32,18 @@ namespace DomowyBudzet
                     {
                         while (reader.Read())
                         {
-                            CategoryData category = new CategoryData();
-                            category.ID = reader.GetInt32(0);
-                            category.Category = reader.GetString(1);
-                            category.Type = reader.GetString(2);
-                            category.Date = reader.GetDateTime(3).ToShortDateString();
-                            categories.Add(category);
+                            CategoryData cData = new CategoryData();
+                            cData.ID = (int)reader["id"];
+                            cData.Category = reader["category"].ToString();
+                            cData.Type = reader["type"].ToString();
+                            cData.Date = ((DateTime)reader["date_insert"]).ToString("MM-dd-yyyy");
+
+                            listData.Add(cData);
                         }
                     }
                 }
             }
-            return categories;
+            return listData;
         }
     }
 }
