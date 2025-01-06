@@ -74,6 +74,7 @@
             Category_ClrBtn.TabIndex = 0;
             Category_ClrBtn.Text = "Wyczyść";
             Category_ClrBtn.UseVisualStyleBackColor = false;
+            Category_ClrBtn.Click += Category_ClrBtn_Click;
             // 
             // Category_DelBtn
             // 

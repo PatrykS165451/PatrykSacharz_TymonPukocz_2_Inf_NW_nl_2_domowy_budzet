@@ -51,6 +51,7 @@ namespace DomowyBudzet
 
                         //exception, do naprawienia.
                         cmd.ExecuteNonQuery();
+                        clearFields();
 
                         MessageBox.Show("Kategoria dodana pomyślnie.", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -99,6 +100,7 @@ namespace DomowyBudzet
                             cmd.Parameters.AddWithValue("@type", Category_CmbBox.Text.Trim());
 
                             cmd.ExecuteNonQuery();
+                            clearFields();
 
                             MessageBox.Show("Edycja zakończona sukcesem.", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
@@ -108,6 +110,18 @@ namespace DomowyBudzet
                 }
             }
             displayCategories();
+        }
+
+        public void clearFields()
+        {
+            Category_TxtBox.Text = "";
+            Category_CmbBox.SelectedIndex = -1;
+            
+        }
+
+        private void Category_ClrBtn_Click(object sender, EventArgs e)
+        {
+            clearFields();
         }
     }
 }
