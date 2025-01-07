@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -102,20 +103,22 @@ namespace DomowyBudzet1
 
         private void IncomeList_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            NameTb.Text = IncomeList.SelectedRows[0].Cells[1].Value.ToString();
-            AmtTb.Text = IncomeList.SelectedRows[0].Cells[2].Value.ToString();
-            CatTb.Text = IncomeList.SelectedRows[0].Cells[3].Value.ToString();
-            //DateTb.Value = Convert.ToDateTime(IncomeList.SelectedRows[0].Cells[4].Value.ToString());
-            DescTb.Text = IncomeList.SelectedRows[0].Cells[5].Value.ToString();
-            if (NameTb.Text == "")
+            if (e.RowIndex >= 0) // Sprawdzenie, czy kliknięto w prawidłowy wiersz
             {
-                key = 0;
-            }
-            else
-            {
-                key = Convert.ToInt32(IncomeList.SelectedRows[0].Cells[0].Value.ToString());
+                var selectedRow = IncomeList.Rows[e.RowIndex];
+
+                if (selectedRow.Cells[0].Value != null) // Upewnij się, że komórka nie jest pusta
+                {
+                    NameTb.Text = selectedRow.Cells[1].Value.ToString();
+                    AmtTb.Text = selectedRow.Cells[2].Value.ToString();
+                    CatTb.Text = selectedRow.Cells[3].Value.ToString();
+                    //DateTb.Value = Convert.ToDateTime(selectedRow.Cells[4].Value.ToString());
+                    DescTb.Text = selectedRow.Cells[5].Value.ToString();
+                    key = Convert.ToInt32(selectedRow.Cells[0].Value);
+                }
             }
         }
+
         private void EditBtn_Click(object sender, EventArgs e)
         {
             if (NameTb.Text == "" || AmtTb.Text == "" || CatTb.Text == "" || DescTb.Text == "")
@@ -146,24 +149,22 @@ namespace DomowyBudzet1
 
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
-            if (key == 0)
+            if (key <= 0)
             {
-                MessageBox.Show("Wybierz pole do usunięcia.");
+                MessageBox.Show("Wybierz poprawny wpis do usunięcia.");
             }
             else
             {
                 try
                 {
-                    string IName = NameTb.Text;
-                    int Amt = Convert.ToInt32(AmtTb.Text);
-                    string Category = CatTb.Text;
-                    string Description = DescTb.Text;
-                    string Query = "delete from IncomeTbl where IncId = '{0}')";
-                    Query = string.Format(Query, key);
-                    Con.SetData(Query);
+                    string Query = "DELETE FROM IncomeTbl WHERE IncId = @IncId";
+                    using (SqlCommand cmd = new SqlCommand(Query, Con.GetConnection()))
+                    {
+                        cmd.Parameters.AddWithValue("@IncId", key);
+                        cmd.ExecuteNonQuery();
+                    }
                     MessageBox.Show("Usunięto pomyślnie.");
                     ShowIncomes();
-
                 }
                 catch (Exception Ex)
                 {
