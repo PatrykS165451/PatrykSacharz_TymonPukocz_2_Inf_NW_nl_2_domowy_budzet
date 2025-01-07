@@ -33,7 +33,10 @@
             label7 = new Label();
             pictureBox7 = new PictureBox();
             panel1 = new Panel();
+            ExpenseBtn = new PictureBox();
+            DashboardBtn = new PictureBox();
             LogoutBtn = new PictureBox();
+            IncomeBtn = new PictureBox();
             pictureBox4 = new PictureBox();
             panel3 = new Panel();
             label1 = new Label();
@@ -44,26 +47,30 @@
             label14 = new Label();
             panel6 = new Panel();
             panel7 = new Panel();
-            pictureBox9 = new PictureBox();
             pictureBox8 = new PictureBox();
-            label13 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
             label8 = new Label();
-            label12 = new Label();
             label6 = new Label();
+            pictureBox9 = new PictureBox();
+            label13 = new Label();
+            label12 = new Label();
             label11 = new Label();
             label10 = new Label();
-            label5 = new Label();
             label9 = new Label();
-            label4 = new Label();
-            label3 = new Label();
             label2 = new Label();
-            ExpenseBtn = new PictureBox();
-            DashboardBtn = new PictureBox();
-            IncomeBtn = new PictureBox();
+            IncLbl = new Label();
+            SummaryLbl = new Label();
+            label17 = new Label();
+            ExpLbl = new Label();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)ExpenseBtn).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)DashboardBtn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)LogoutBtn).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)IncomeBtn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
@@ -72,11 +79,8 @@
             panel5.SuspendLayout();
             panel6.SuspendLayout();
             panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)ExpenseBtn).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)DashboardBtn).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)IncomeBtn).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             SuspendLayout();
             // 
             // panel2
@@ -125,6 +129,24 @@
             panel1.Size = new Size(84, 811);
             panel1.TabIndex = 3;
             // 
+            // ExpenseBtn
+            // 
+            ExpenseBtn.Image = (Image)resources.GetObject("ExpenseBtn.Image");
+            ExpenseBtn.Location = new Point(12, 338);
+            ExpenseBtn.Name = "ExpenseBtn";
+            ExpenseBtn.Size = new Size(59, 55);
+            ExpenseBtn.TabIndex = 10;
+            ExpenseBtn.TabStop = false;
+            // 
+            // DashboardBtn
+            // 
+            DashboardBtn.Image = (Image)resources.GetObject("DashboardBtn.Image");
+            DashboardBtn.Location = new Point(12, 108);
+            DashboardBtn.Name = "DashboardBtn";
+            DashboardBtn.Size = new Size(59, 55);
+            DashboardBtn.TabIndex = 11;
+            DashboardBtn.TabStop = false;
+            // 
             // LogoutBtn
             // 
             LogoutBtn.Image = (Image)resources.GetObject("LogoutBtn.Image");
@@ -134,6 +156,15 @@
             LogoutBtn.TabIndex = 1;
             LogoutBtn.TabStop = false;
             LogoutBtn.Click += LogoutBtn_Click;
+            // 
+            // IncomeBtn
+            // 
+            IncomeBtn.Image = (Image)resources.GetObject("IncomeBtn.Image");
+            IncomeBtn.Location = new Point(12, 454);
+            IncomeBtn.Name = "IncomeBtn";
+            IncomeBtn.Size = new Size(59, 55);
+            IncomeBtn.TabIndex = 12;
+            IncomeBtn.TabStop = false;
             // 
             // pictureBox4
             // 
@@ -149,6 +180,7 @@
             panel3.BackColor = Color.WhiteSmoke;
             panel3.Controls.Add(label1);
             panel3.Controls.Add(pictureBox6);
+            panel3.Controls.Add(IncLbl);
             panel3.Location = new Point(152, 112);
             panel3.Name = "panel3";
             panel3.Size = new Size(284, 145);
@@ -176,7 +208,9 @@
             // panel4
             // 
             panel4.BackColor = Color.WhiteSmoke;
+            panel4.Controls.Add(label17);
             panel4.Controls.Add(pictureBox10);
+            panel4.Controls.Add(SummaryLbl);
             panel4.Location = new Point(533, 112);
             panel4.Name = "panel4";
             panel4.Size = new Size(284, 145);
@@ -195,6 +229,7 @@
             // 
             panel5.BackColor = Color.WhiteSmoke;
             panel5.Controls.Add(label14);
+            panel5.Controls.Add(ExpLbl);
             panel5.Location = new Point(949, 112);
             panel5.Name = "panel5";
             panel5.Size = new Size(284, 145);
@@ -241,15 +276,6 @@
             panel7.Size = new Size(322, 219);
             panel7.TabIndex = 8;
             // 
-            // pictureBox9
-            // 
-            pictureBox9.Image = (Image)resources.GetObject("pictureBox9.Image");
-            pictureBox9.Location = new Point(689, 152);
-            pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(59, 55);
-            pictureBox9.TabIndex = 1;
-            pictureBox9.TabStop = false;
-            // 
             // pictureBox8
             // 
             pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
@@ -259,16 +285,38 @@
             pictureBox8.TabIndex = 1;
             pictureBox8.TabStop = false;
             // 
-            // label13
+            // label3
             // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label13.ForeColor = Color.LimeGreen;
-            label13.Location = new Point(766, 248);
-            label13.Name = "label13";
-            label13.Size = new Size(169, 21);
-            label13.TabIndex = 7;
-            label13.Text = "Get the overall amount";
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.ForeColor = Color.Maroon;
+            label3.Location = new Point(80, 9);
+            label3.Name = "label3";
+            label3.Size = new Size(67, 21);
+            label3.TabIndex = 7;
+            label3.Text = "Wydatki";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.ForeColor = Color.Maroon;
+            label4.Location = new Point(80, 52);
+            label4.Name = "label4";
+            label4.Size = new Size(67, 21);
+            label4.TabIndex = 7;
+            label4.Text = "Wydatki";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.ForeColor = Color.Maroon;
+            label5.Location = new Point(80, 93);
+            label5.Name = "label5";
+            label5.Size = new Size(67, 21);
+            label5.TabIndex = 7;
+            label5.Text = "Wydatki";
             // 
             // label8
             // 
@@ -281,17 +329,6 @@
             label8.TabIndex = 7;
             label8.Text = "Wydatki";
             // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label12.ForeColor = Color.LimeGreen;
-            label12.Location = new Point(766, 211);
-            label12.Name = "label12";
-            label12.Size = new Size(180, 21);
-            label12.TabIndex = 7;
-            label12.Text = "Tracks based on the date";
-            // 
             // label6
             // 
             label6.AutoSize = true;
@@ -302,6 +339,37 @@
             label6.Size = new Size(67, 21);
             label6.TabIndex = 7;
             label6.Text = "Wydatki";
+            // 
+            // pictureBox9
+            // 
+            pictureBox9.Image = (Image)resources.GetObject("pictureBox9.Image");
+            pictureBox9.Location = new Point(689, 152);
+            pictureBox9.Name = "pictureBox9";
+            pictureBox9.Size = new Size(59, 55);
+            pictureBox9.TabIndex = 1;
+            pictureBox9.TabStop = false;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label13.ForeColor = Color.LimeGreen;
+            label13.Location = new Point(766, 248);
+            label13.Name = "label13";
+            label13.Size = new Size(169, 21);
+            label13.TabIndex = 7;
+            label13.Text = "Get the overall amount";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label12.ForeColor = Color.LimeGreen;
+            label12.Location = new Point(766, 211);
+            label12.Name = "label12";
+            label12.Size = new Size(180, 21);
+            label12.TabIndex = 7;
+            label12.Text = "Tracks based on the date";
             // 
             // label11
             // 
@@ -325,17 +393,6 @@
             label10.TabIndex = 7;
             label10.Text = "Register the income category";
             // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.ForeColor = Color.Maroon;
-            label5.Location = new Point(80, 93);
-            label5.Name = "label5";
-            label5.Size = new Size(67, 21);
-            label5.TabIndex = 7;
-            label5.Text = "Wydatki";
-            // 
             // label9
             // 
             label9.AutoSize = true;
@@ -347,28 +404,6 @@
             label9.TabIndex = 7;
             label9.Text = "Represents all the Income";
             // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.ForeColor = Color.Maroon;
-            label4.Location = new Point(80, 52);
-            label4.Name = "label4";
-            label4.Size = new Size(67, 21);
-            label4.TabIndex = 7;
-            label4.Text = "Wydatki";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.ForeColor = Color.Maroon;
-            label3.Location = new Point(80, 9);
-            label3.Name = "label3";
-            label3.Size = new Size(67, 21);
-            label3.TabIndex = 7;
-            label3.Text = "Wydatki";
-            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -379,32 +414,49 @@
             label2.TabIndex = 7;
             label2.Text = "Podsumowanie dochodów";
             // 
-            // ExpenseBtn
+            // IncLbl
             // 
-            ExpenseBtn.Image = (Image)resources.GetObject("ExpenseBtn.Image");
-            ExpenseBtn.Location = new Point(12, 338);
-            ExpenseBtn.Name = "ExpenseBtn";
-            ExpenseBtn.Size = new Size(59, 55);
-            ExpenseBtn.TabIndex = 10;
-            ExpenseBtn.TabStop = false;
+            IncLbl.AutoSize = true;
+            IncLbl.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            IncLbl.ForeColor = Color.LimeGreen;
+            IncLbl.Location = new Point(95, 57);
+            IncLbl.Name = "IncLbl";
+            IncLbl.Size = new Size(131, 21);
+            IncLbl.TabIndex = 7;
+            IncLbl.Text = "Przychody w PLN";
             // 
-            // DashboardBtn
+            // SummaryLbl
             // 
-            DashboardBtn.Image = (Image)resources.GetObject("DashboardBtn.Image");
-            DashboardBtn.Location = new Point(12, 108);
-            DashboardBtn.Name = "DashboardBtn";
-            DashboardBtn.Size = new Size(59, 55);
-            DashboardBtn.TabIndex = 11;
-            DashboardBtn.TabStop = false;
+            SummaryLbl.AutoSize = true;
+            SummaryLbl.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            SummaryLbl.ForeColor = Color.LimeGreen;
+            SummaryLbl.Location = new Point(99, 57);
+            SummaryLbl.Name = "SummaryLbl";
+            SummaryLbl.Size = new Size(131, 21);
+            SummaryLbl.TabIndex = 7;
+            SummaryLbl.Text = "Przychody w PLN";
             // 
-            // IncomeBtn
+            // label17
             // 
-            IncomeBtn.Image = (Image)resources.GetObject("IncomeBtn.Image");
-            IncomeBtn.Location = new Point(12, 454);
-            IncomeBtn.Name = "IncomeBtn";
-            IncomeBtn.Size = new Size(59, 55);
-            IncomeBtn.TabIndex = 12;
-            IncomeBtn.TabStop = false;
+            label17.AutoSize = true;
+            label17.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label17.Location = new Point(16, 13);
+            label17.Name = "label17";
+            label17.Size = new Size(116, 21);
+            label17.TabIndex = 6;
+            label17.Text = "Podsumowanie";
+            label17.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // ExpLbl
+            // 
+            ExpLbl.AutoSize = true;
+            ExpLbl.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            ExpLbl.ForeColor = Color.LimeGreen;
+            ExpLbl.Location = new Point(110, 57);
+            ExpLbl.Name = "ExpLbl";
+            ExpLbl.Size = new Size(116, 21);
+            ExpLbl.TabIndex = 7;
+            ExpLbl.Text = "Wydatki w PLN";
             // 
             // Dashboard
             // 
@@ -426,12 +478,16 @@
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)ExpenseBtn).EndInit();
+            ((System.ComponentModel.ISupportInitialize)DashboardBtn).EndInit();
             ((System.ComponentModel.ISupportInitialize)LogoutBtn).EndInit();
+            ((System.ComponentModel.ISupportInitialize)IncomeBtn).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             panel4.ResumeLayout(false);
+            panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
@@ -439,11 +495,8 @@
             panel6.PerformLayout();
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
-            ((System.ComponentModel.ISupportInitialize)ExpenseBtn).EndInit();
-            ((System.ComponentModel.ISupportInitialize)DashboardBtn).EndInit();
-            ((System.ComponentModel.ISupportInitialize)IncomeBtn).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             ResumeLayout(false);
         }
 
@@ -480,5 +533,9 @@
         private PictureBox ExpenseBtn;
         private PictureBox DashboardBtn;
         private PictureBox IncomeBtn;
+        private Label IncLbl;
+        private Label label17;
+        private Label SummaryLbl;
+        private Label ExpLbl;
     }
 }

@@ -100,7 +100,7 @@ namespace DomowyBudzet1
         }
         int key = 0;
 
-        private void IncomeList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void IncomeList_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             NameTb.Text = IncomeList.SelectedRows[0].Cells[1].Value.ToString();
             AmtTb.Text = IncomeList.SelectedRows[0].Cells[2].Value.ToString();
@@ -130,10 +130,10 @@ namespace DomowyBudzet1
                     int Amt = Convert.ToInt32(AmtTb.Text);
                     string Category = CatTb.Text;
                     string Description = DescTb.Text;
-                    string Query = "update IncomeTbl set IncName = '{0}',IncAmt = '{1}',IncCat = '{2}',IncDate = '{3}',IncDesc = '{4}')";
-                    Query = string.Format(Query, IName, Amt, Category, DateTb.Value.Date, Description);
+                    string Query = "update IncomeTbl set IncName = '{0}',IncAmt = '{1}',IncCat = '{2}',IncDate = '{3}',IncDesc = '{4}' where IncId = '{5}'";
+                    Query = string.Format(Query, IName, Amt, Category, DateTb.Value.Date, Description, key);
                     Con.SetData(Query);
-                    MessageBox.Show("Dodano pomyślnie.");
+                    MessageBox.Show("Zedytowano pomyślnie.");
                     ShowIncomes();
 
                 }
@@ -143,5 +143,35 @@ namespace DomowyBudzet1
                 }
             }
         }
+
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            if (key == 0)
+            {
+                MessageBox.Show("Wybierz pole do usunięcia.");
+            }
+            else
+            {
+                try
+                {
+                    string IName = NameTb.Text;
+                    int Amt = Convert.ToInt32(AmtTb.Text);
+                    string Category = CatTb.Text;
+                    string Description = DescTb.Text;
+                    string Query = "delete from IncomeTbl where IncId = '{0}')";
+                    Query = string.Format(Query, key);
+                    Con.SetData(Query);
+                    MessageBox.Show("Usunięto pomyślnie.");
+                    ShowIncomes();
+
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
+        }
+
+        
     }
 }

@@ -87,6 +87,7 @@
             IncomeList.RowTemplate.Height = 25;
             IncomeList.Size = new Size(795, 583);
             IncomeList.TabIndex = 25;
+            IncomeList.CellContentClick += IncomeList_CellContentClick_1;
             // 
             // pictureBox6
             // 
@@ -112,6 +113,7 @@
             DeleteBtn.TabIndex = 24;
             DeleteBtn.Text = "Usuń";
             DeleteBtn.UseVisualStyleBackColor = false;
+            DeleteBtn.Click += DeleteBtn_Click;
             // 
             // EditBtn
             // 

@@ -38,23 +38,23 @@
             pictureBox4 = new PictureBox();
             panel2 = new Panel();
             label7 = new Label();
-            textBox1 = new TextBox();
+            NameTb = new TextBox();
             label1 = new Label();
-            textBox2 = new TextBox();
+            AmountTb = new TextBox();
             label2 = new Label();
-            textBox3 = new TextBox();
+            CatTb = new TextBox();
             label3 = new Label();
-            textBox4 = new TextBox();
             label4 = new Label();
-            textBox5 = new TextBox();
+            DescTb = new TextBox();
             label5 = new Label();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
+            AddBtn = new Button();
+            EditBtn = new Button();
+            DeleteBtn = new Button();
             pictureBox6 = new PictureBox();
-            dataGridView1 = new DataGridView();
+            ExpenseList = new DataGridView();
             label6 = new Label();
             label8 = new Label();
+            DateTb = new DateTimePicker();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ExpenseBtn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)DashboardBtn).BeginInit();
@@ -64,7 +64,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ExpenseList).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -159,13 +159,13 @@
             label7.TabIndex = 4;
             label7.Text = "SmartBudget";
             // 
-            // textBox1
+            // NameTb
             // 
-            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(162, 248);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(247, 29);
-            textBox1.TabIndex = 3;
+            NameTb.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            NameTb.Location = new Point(162, 248);
+            NameTb.Name = "NameTb";
+            NameTb.Size = new Size(247, 29);
+            NameTb.TabIndex = 3;
             // 
             // label1
             // 
@@ -177,13 +177,13 @@
             label1.TabIndex = 4;
             label1.Text = "Tytuł";
             // 
-            // textBox2
+            // AmountTb
             // 
-            textBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(162, 323);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(247, 29);
-            textBox2.TabIndex = 3;
+            AmountTb.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            AmountTb.Location = new Point(162, 323);
+            AmountTb.Name = "AmountTb";
+            AmountTb.Size = new Size(247, 29);
+            AmountTb.TabIndex = 3;
             // 
             // label2
             // 
@@ -195,13 +195,13 @@
             label2.TabIndex = 4;
             label2.Text = "Wartość";
             // 
-            // textBox3
+            // CatTb
             // 
-            textBox3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox3.Location = new Point(162, 408);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(247, 29);
-            textBox3.TabIndex = 3;
+            CatTb.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            CatTb.Location = new Point(162, 408);
+            CatTb.Name = "CatTb";
+            CatTb.Size = new Size(247, 29);
+            CatTb.TabIndex = 3;
             // 
             // label3
             // 
@@ -213,14 +213,6 @@
             label3.TabIndex = 4;
             label3.Text = "Kategoria";
             // 
-            // textBox4
-            // 
-            textBox4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox4.Location = new Point(162, 491);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(247, 29);
-            textBox4.TabIndex = 3;
-            // 
             // label4
             // 
             label4.AutoSize = true;
@@ -231,13 +223,13 @@
             label4.TabIndex = 4;
             label4.Text = "Data";
             // 
-            // textBox5
+            // DescTb
             // 
-            textBox5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox5.Location = new Point(162, 573);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(247, 29);
-            textBox5.TabIndex = 3;
+            DescTb.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            DescTb.Location = new Point(162, 573);
+            DescTb.Name = "DescTb";
+            DescTb.Size = new Size(247, 29);
+            DescTb.TabIndex = 3;
             // 
             // label5
             // 
@@ -249,47 +241,50 @@
             label5.TabIndex = 4;
             label5.Text = "Opis";
             // 
-            // button1
+            // AddBtn
             // 
-            button1.BackColor = Color.White;
-            button1.FlatAppearance.BorderColor = Color.SeaGreen;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.MouseOverBackColor = Color.Silver;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(156, 650);
-            button1.Name = "button1";
-            button1.Size = new Size(87, 48);
-            button1.TabIndex = 5;
-            button1.Text = "Dodaj";
-            button1.UseVisualStyleBackColor = false;
+            AddBtn.BackColor = Color.White;
+            AddBtn.FlatAppearance.BorderColor = Color.SeaGreen;
+            AddBtn.FlatAppearance.BorderSize = 0;
+            AddBtn.FlatAppearance.MouseOverBackColor = Color.Silver;
+            AddBtn.FlatStyle = FlatStyle.Flat;
+            AddBtn.Location = new Point(156, 650);
+            AddBtn.Name = "AddBtn";
+            AddBtn.Size = new Size(87, 48);
+            AddBtn.TabIndex = 5;
+            AddBtn.Text = "Dodaj";
+            AddBtn.UseVisualStyleBackColor = false;
+            AddBtn.Click += AddBtn_Click;
             // 
-            // button2
+            // EditBtn
             // 
-            button2.BackColor = Color.White;
-            button2.FlatAppearance.BorderColor = Color.SeaGreen;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatAppearance.MouseOverBackColor = Color.Silver;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Location = new Point(322, 650);
-            button2.Name = "button2";
-            button2.Size = new Size(87, 48);
-            button2.TabIndex = 5;
-            button2.Text = "Edytuj";
-            button2.UseVisualStyleBackColor = false;
+            EditBtn.BackColor = Color.White;
+            EditBtn.FlatAppearance.BorderColor = Color.SeaGreen;
+            EditBtn.FlatAppearance.BorderSize = 0;
+            EditBtn.FlatAppearance.MouseOverBackColor = Color.Silver;
+            EditBtn.FlatStyle = FlatStyle.Flat;
+            EditBtn.Location = new Point(322, 650);
+            EditBtn.Name = "EditBtn";
+            EditBtn.Size = new Size(87, 48);
+            EditBtn.TabIndex = 5;
+            EditBtn.Text = "Edytuj";
+            EditBtn.UseVisualStyleBackColor = false;
+            EditBtn.Click += EditBtn_Click;
             // 
-            // button3
+            // DeleteBtn
             // 
-            button3.BackColor = Color.White;
-            button3.FlatAppearance.BorderColor = Color.SeaGreen;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatAppearance.MouseOverBackColor = Color.Red;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Location = new Point(156, 725);
-            button3.Name = "button3";
-            button3.Size = new Size(253, 48);
-            button3.TabIndex = 5;
-            button3.Text = "Usuń";
-            button3.UseVisualStyleBackColor = false;
+            DeleteBtn.BackColor = Color.White;
+            DeleteBtn.FlatAppearance.BorderColor = Color.SeaGreen;
+            DeleteBtn.FlatAppearance.BorderSize = 0;
+            DeleteBtn.FlatAppearance.MouseOverBackColor = Color.Red;
+            DeleteBtn.FlatStyle = FlatStyle.Flat;
+            DeleteBtn.Location = new Point(156, 725);
+            DeleteBtn.Name = "DeleteBtn";
+            DeleteBtn.Size = new Size(253, 48);
+            DeleteBtn.TabIndex = 5;
+            DeleteBtn.Text = "Usuń";
+            DeleteBtn.UseVisualStyleBackColor = false;
+            DeleteBtn.Click += DeleteBtn_Click;
             // 
             // pictureBox6
             // 
@@ -301,14 +296,15 @@
             pictureBox6.TabIndex = 1;
             pictureBox6.TabStop = false;
             // 
-            // dataGridView1
+            // ExpenseList
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(489, 190);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(795, 583);
-            dataGridView1.TabIndex = 6;
+            ExpenseList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            ExpenseList.Location = new Point(489, 190);
+            ExpenseList.Name = "ExpenseList";
+            ExpenseList.RowTemplate.Height = 25;
+            ExpenseList.Size = new Size(795, 583);
+            ExpenseList.TabIndex = 6;
+            ExpenseList.CellContentClick += ExpenseList_CellContentClick;
             // 
             // label6
             // 
@@ -331,29 +327,37 @@
             label8.TabIndex = 4;
             label8.Text = "Lista wydatków";
             // 
+            // DateTb
+            // 
+            DateTb.Format = DateTimePickerFormat.Short;
+            DateTb.Location = new Point(162, 504);
+            DateTb.Name = "DateTb";
+            DateTb.Size = new Size(247, 29);
+            DateTb.TabIndex = 7;
+            // 
             // Expenses
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SeaGreen;
             ClientSize = new Size(1296, 811);
+            Controls.Add(DateTb);
             Controls.Add(label6);
-            Controls.Add(dataGridView1);
+            Controls.Add(ExpenseList);
             Controls.Add(pictureBox6);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(DeleteBtn);
+            Controls.Add(EditBtn);
+            Controls.Add(AddBtn);
             Controls.Add(label5);
-            Controls.Add(textBox5);
+            Controls.Add(DescTb);
             Controls.Add(label4);
-            Controls.Add(textBox4);
             Controls.Add(label3);
-            Controls.Add(textBox3);
+            Controls.Add(CatTb);
             Controls.Add(label2);
-            Controls.Add(textBox2);
+            Controls.Add(AmountTb);
             Controls.Add(label8);
             Controls.Add(label1);
-            Controls.Add(textBox1);
+            Controls.Add(NameTb);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
@@ -372,7 +376,7 @@
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ExpenseList).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -383,21 +387,22 @@
         private PictureBox LogoutBtn;
         private PictureBox pictureBox4;
         private Panel panel2;
-        private TextBox textBox1;
+        private TextBox NameTb;
         private Label label1;
-        private TextBox textBox2;
+        private TextBox AmountTb;
         private Label label2;
-        private TextBox textBox3;
+        private TextBox CatTb;
         private Label label3;
         private TextBox textBox4;
         private Label label4;
+        private TextBox DescTb;
         private TextBox textBox5;
         private Label label5;
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private Button AddBtn;
+        private Button EditBtn;
+        private Button DeleteBtn;
         private PictureBox pictureBox6;
-        private DataGridView dataGridView1;
+        private DataGridView ExpenseList;
         private Label label6;
         private PictureBox pictureBox7;
         private Label label7;
@@ -405,5 +410,6 @@
         private PictureBox ExpenseBtn;
         private PictureBox DashboardBtn;
         private PictureBox IncomeBtn;
+        private DateTimePicker DateTb;
     }
 }
