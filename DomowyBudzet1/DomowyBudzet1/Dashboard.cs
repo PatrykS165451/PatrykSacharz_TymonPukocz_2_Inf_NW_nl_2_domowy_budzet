@@ -16,6 +16,8 @@ namespace DomowyBudzet1
         {
             InitializeComponent();
             Con = new Functions();
+            SumExpenses();
+            SumIncomes();
         }
         Functions Con;
         private void SumExpenses()
@@ -26,11 +28,11 @@ namespace DomowyBudzet1
                 DataTable dt = Con.GetData(Query);
                 if (dt.Rows.Count > 0)
                 {
-                    ExpLbl.Text = dt.Rows[0][0].ToString() + " zł";
+                    ExpSum.Text = "Łączna suma wydatków: " + dt.Rows[0][0].ToString() + " zł";
                 }
                 else
                 {
-                    ExpLbl.Text = "0 zł";
+                    ExpSum.Text = "0 zł";
                 }
             }
             catch (Exception ex)
@@ -39,7 +41,28 @@ namespace DomowyBudzet1
             }
         }
 
-       
+        private void SumIncomes()
+        {
+            try
+            {
+                string Query = "select sum(IncAmt) from IncomeTbl";
+                DataTable dt = Con.GetData(Query);
+                if (dt.Rows.Count > 0)
+                {
+                    IncSum.Text = "Łączna suma przychodów: " + dt.Rows[0][0].ToString() + " zł";
+                }
+                else
+                {
+                    IncSum.Text = "0 zł";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Błąd podczas pobierania danych: " + ex.Message);
+            }
+        }
+
+
 
         private void LogoutBtn_Click(object sender, EventArgs e)
         {

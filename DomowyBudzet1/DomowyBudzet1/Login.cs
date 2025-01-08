@@ -17,27 +17,16 @@ namespace DomowyBudzet1
             InitializeComponent();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void CloseBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void LoginBtn_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            if (UsernameTb.Text == "" || PasswordTb.Text == "")
-            {
-                MessageBox.Show("Wprowadź nazwę użytkownika i hasło.");
-            }
-            else if (UsernameTb.Text == "admin" && PasswordTb.Text == "admin")
-            {
-                Incomes Obj = new Incomes();
-                Obj.Show();
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Niepoprawna nazwa użytkownika lub hasło.");
-            }
+            Dashboard Obj = new Dashboard();
+            Obj.Show();
+            this.Hide();
         }
     }
 }
