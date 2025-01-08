@@ -41,10 +41,14 @@
             panel3 = new Panel();
             label1 = new Label();
             pictureBox6 = new PictureBox();
+            IncLbl = new Label();
             panel4 = new Panel();
+            label17 = new Label();
             pictureBox10 = new PictureBox();
+            SummaryLbl = new Label();
             panel5 = new Panel();
             label14 = new Label();
+            ExpLbl = new Label();
             panel6 = new Panel();
             panel7 = new Panel();
             pictureBox8 = new PictureBox();
@@ -60,10 +64,6 @@
             label10 = new Label();
             label9 = new Label();
             label2 = new Label();
-            IncLbl = new Label();
-            SummaryLbl = new Label();
-            label17 = new Label();
-            ExpLbl = new Label();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             panel1.SuspendLayout();
@@ -137,6 +137,7 @@
             ExpenseBtn.Size = new Size(59, 55);
             ExpenseBtn.TabIndex = 10;
             ExpenseBtn.TabStop = false;
+            ExpenseBtn.Click += ExpenseBtn_Click_1;
             // 
             // DashboardBtn
             // 
@@ -146,6 +147,7 @@
             DashboardBtn.Size = new Size(59, 55);
             DashboardBtn.TabIndex = 11;
             DashboardBtn.TabStop = false;
+            DashboardBtn.Click += DashboardBtn_Click_1;
             // 
             // LogoutBtn
             // 
@@ -165,6 +167,7 @@
             IncomeBtn.Size = new Size(59, 55);
             IncomeBtn.TabIndex = 12;
             IncomeBtn.TabStop = false;
+            IncomeBtn.Click += IncomeBtn_Click_1;
             // 
             // pictureBox4
             // 
@@ -205,6 +208,17 @@
             pictureBox6.TabIndex = 1;
             pictureBox6.TabStop = false;
             // 
+            // IncLbl
+            // 
+            IncLbl.AutoSize = true;
+            IncLbl.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            IncLbl.ForeColor = Color.LimeGreen;
+            IncLbl.Location = new Point(95, 57);
+            IncLbl.Name = "IncLbl";
+            IncLbl.Size = new Size(131, 21);
+            IncLbl.TabIndex = 7;
+            IncLbl.Text = "Przychody w PLN";
+            // 
             // panel4
             // 
             panel4.BackColor = Color.WhiteSmoke;
@@ -216,6 +230,17 @@
             panel4.Size = new Size(284, 145);
             panel4.TabIndex = 5;
             // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label17.Location = new Point(16, 13);
+            label17.Name = "label17";
+            label17.Size = new Size(116, 21);
+            label17.TabIndex = 6;
+            label17.Text = "Podsumowanie";
+            label17.TextAlign = ContentAlignment.TopCenter;
+            // 
             // pictureBox10
             // 
             pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
@@ -224,6 +249,17 @@
             pictureBox10.Size = new Size(59, 55);
             pictureBox10.TabIndex = 1;
             pictureBox10.TabStop = false;
+            // 
+            // SummaryLbl
+            // 
+            SummaryLbl.AutoSize = true;
+            SummaryLbl.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            SummaryLbl.ForeColor = Color.LimeGreen;
+            SummaryLbl.Location = new Point(99, 57);
+            SummaryLbl.Name = "SummaryLbl";
+            SummaryLbl.Size = new Size(131, 21);
+            SummaryLbl.TabIndex = 7;
+            SummaryLbl.Text = "Przychody w PLN";
             // 
             // panel5
             // 
@@ -245,6 +281,17 @@
             label14.Size = new Size(67, 21);
             label14.TabIndex = 7;
             label14.Text = "Wydatki";
+            // 
+            // ExpLbl
+            // 
+            ExpLbl.AutoSize = true;
+            ExpLbl.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            ExpLbl.ForeColor = Color.LimeGreen;
+            ExpLbl.Location = new Point(110, 57);
+            ExpLbl.Name = "ExpLbl";
+            ExpLbl.Size = new Size(116, 21);
+            ExpLbl.TabIndex = 7;
+            ExpLbl.Text = "Wydatki w PLN";
             // 
             // panel6
             // 
@@ -413,50 +460,6 @@
             label2.Size = new Size(274, 30);
             label2.TabIndex = 7;
             label2.Text = "Podsumowanie dochodów";
-            // 
-            // IncLbl
-            // 
-            IncLbl.AutoSize = true;
-            IncLbl.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            IncLbl.ForeColor = Color.LimeGreen;
-            IncLbl.Location = new Point(95, 57);
-            IncLbl.Name = "IncLbl";
-            IncLbl.Size = new Size(131, 21);
-            IncLbl.TabIndex = 7;
-            IncLbl.Text = "Przychody w PLN";
-            // 
-            // SummaryLbl
-            // 
-            SummaryLbl.AutoSize = true;
-            SummaryLbl.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            SummaryLbl.ForeColor = Color.LimeGreen;
-            SummaryLbl.Location = new Point(99, 57);
-            SummaryLbl.Name = "SummaryLbl";
-            SummaryLbl.Size = new Size(131, 21);
-            SummaryLbl.TabIndex = 7;
-            SummaryLbl.Text = "Przychody w PLN";
-            // 
-            // label17
-            // 
-            label17.AutoSize = true;
-            label17.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label17.Location = new Point(16, 13);
-            label17.Name = "label17";
-            label17.Size = new Size(116, 21);
-            label17.TabIndex = 6;
-            label17.Text = "Podsumowanie";
-            label17.TextAlign = ContentAlignment.TopCenter;
-            // 
-            // ExpLbl
-            // 
-            ExpLbl.AutoSize = true;
-            ExpLbl.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            ExpLbl.ForeColor = Color.LimeGreen;
-            ExpLbl.Location = new Point(110, 57);
-            ExpLbl.Name = "ExpLbl";
-            ExpLbl.Size = new Size(116, 21);
-            ExpLbl.TabIndex = 7;
-            ExpLbl.Text = "Wydatki w PLN";
             // 
             // Dashboard
             // 
