@@ -66,7 +66,7 @@
             // 
             // panel2
             // 
-            panel2.BackColor = Color.White;
+            panel2.BackColor = Color.FromArgb(224, 224, 224);
             panel2.Controls.Add(label7);
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(84, 0);
@@ -97,7 +97,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.White;
+            panel1.BackColor = Color.FromArgb(224, 224, 224);
             panel1.Controls.Add(ExpenseBtn);
             panel1.Controls.Add(DashboardBtn);
             panel1.Controls.Add(LogoutBtn);
@@ -156,7 +156,7 @@
             // 
             // panel3
             // 
-            panel3.BackColor = Color.WhiteSmoke;
+            panel3.BackColor = SystemColors.ButtonFace;
             panel3.Controls.Add(label1);
             panel3.Controls.Add(pictureBox6);
             panel3.Controls.Add(IncLbl);
@@ -197,7 +197,7 @@
             // 
             // panel4
             // 
-            panel4.BackColor = Color.WhiteSmoke;
+            panel4.BackColor = SystemColors.ButtonFace;
             panel4.Controls.Add(label17);
             panel4.Controls.Add(pictureBox10);
             panel4.Controls.Add(SummaryLbl);
@@ -239,7 +239,7 @@
             // 
             // panel5
             // 
-            panel5.BackColor = Color.Beige;
+            panel5.BackColor = SystemColors.ButtonFace;
             panel5.Controls.Add(pictureBox1);
             panel5.Controls.Add(label14);
             panel5.Controls.Add(ExpLbl);

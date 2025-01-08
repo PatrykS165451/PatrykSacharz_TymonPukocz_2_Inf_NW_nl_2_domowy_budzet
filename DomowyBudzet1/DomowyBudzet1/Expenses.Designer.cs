@@ -67,7 +67,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.White;
+            panel1.BackColor = Color.FromArgb(224, 224, 224);
             panel1.Controls.Add(ExpenseBtn);
             panel1.Controls.Add(DashboardBtn);
             panel1.Controls.Add(LogoutBtn);
@@ -136,7 +136,7 @@
             // 
             // panel2
             // 
-            panel2.BackColor = Color.White;
+            panel2.BackColor = Color.FromArgb(224, 224, 224);
             panel2.Controls.Add(label7);
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(84, 0);
