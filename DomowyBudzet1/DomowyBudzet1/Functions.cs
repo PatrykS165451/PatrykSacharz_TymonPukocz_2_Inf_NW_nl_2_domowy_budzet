@@ -15,6 +15,7 @@ namespace DomowyBudzet1
         private DataTable dt;
         private SqlDataAdapter Sda;
         private string ConStr;
+        //Konstruktor klasy Functions
         public Functions()
         {
             ConStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\patry\Documents\wydatkiDb.mdf;Integrated Security=True;Connect Timeout=30";
@@ -23,12 +24,9 @@ namespace DomowyBudzet1
             Cmd.Connection = Con;
         }
 
+        //Metoda pobierająca dane z bazy danych
         public DataTable GetData(string Query)
         {
-            //dt = new DataTable();
-            //Sda = new SqlDataAdapter(Query, ConStr);
-            //Sda.Fill(dt);
-            //return dt;
             try
             {
                 Con.Open();
@@ -39,6 +37,7 @@ namespace DomowyBudzet1
                 Con.Close();
                 return dt;
             }
+            //Obsługa błędów
             catch (Exception ex)
             {
                 MessageBox.Show("Błąd podczas pobierania danych: " + ex.Message);
@@ -46,6 +45,7 @@ namespace DomowyBudzet1
             }
         }
 
+        //Metoda ustawiająca dane w bazie danych
         public int SetData(string Query)
         {
             int Cnt = 0;

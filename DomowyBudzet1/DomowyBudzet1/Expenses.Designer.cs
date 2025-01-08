@@ -139,6 +139,7 @@
             panel2.BackColor = Color.FromArgb(224, 224, 224);
             panel2.Controls.Add(label7);
             panel2.Dock = DockStyle.Top;
+            panel2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             panel2.Location = new Point(84, 0);
             panel2.Name = "panel2";
             panel2.Size = new Size(1212, 69);
@@ -147,16 +148,18 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.Font = new Font("Segoe UI Semibold", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
             label7.ForeColor = Color.Black;
             label7.Location = new Point(16, 9);
             label7.Name = "label7";
-            label7.Size = new Size(200, 40);
+            label7.Size = new Size(190, 40);
             label7.TabIndex = 4;
             label7.Text = "SmartBudget";
             // 
             // NameTb
             // 
+            NameTb.BackColor = Color.FromArgb(183, 183, 183);
+            NameTb.BorderStyle = BorderStyle.FixedSingle;
             NameTb.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             NameTb.Location = new Point(162, 248);
             NameTb.Name = "NameTb";
@@ -166,7 +169,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.ForeColor = Color.White;
+            label1.ForeColor = Color.FromArgb(248, 250, 252);
             label1.Location = new Point(162, 224);
             label1.Name = "label1";
             label1.Size = new Size(46, 21);
@@ -184,7 +187,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.ForeColor = Color.White;
+            label2.ForeColor = Color.FromArgb(248, 250, 252);
             label2.Location = new Point(162, 299);
             label2.Name = "label2";
             label2.Size = new Size(69, 21);
@@ -202,7 +205,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.ForeColor = Color.White;
+            label3.ForeColor = Color.FromArgb(248, 250, 252);
             label3.Location = new Point(162, 384);
             label3.Name = "label3";
             label3.Size = new Size(81, 21);
@@ -212,7 +215,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.ForeColor = Color.White;
+            label4.ForeColor = Color.FromArgb(248, 250, 252);
             label4.Location = new Point(162, 467);
             label4.Name = "label4";
             label4.Size = new Size(43, 21);
@@ -230,7 +233,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.ForeColor = Color.White;
+            label5.ForeColor = Color.FromArgb(248, 250, 252);
             label5.Location = new Point(162, 549);
             label5.Name = "label5";
             label5.Size = new Size(43, 21);
@@ -240,8 +243,7 @@
             // AddBtn
             // 
             AddBtn.BackColor = Color.White;
-            AddBtn.FlatAppearance.BorderColor = Color.SeaGreen;
-            AddBtn.FlatAppearance.BorderSize = 0;
+            AddBtn.FlatAppearance.BorderColor = Color.Black;
             AddBtn.FlatAppearance.MouseOverBackColor = Color.Silver;
             AddBtn.FlatStyle = FlatStyle.Flat;
             AddBtn.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
@@ -255,10 +257,9 @@
             // 
             // EditBtn
             // 
-            EditBtn.BackColor = Color.White;
-            EditBtn.FlatAppearance.BorderColor = Color.SeaGreen;
-            EditBtn.FlatAppearance.BorderSize = 0;
-            EditBtn.FlatAppearance.MouseOverBackColor = Color.Silver;
+            EditBtn.BackColor = Color.FromArgb(235, 131, 23);
+            EditBtn.FlatAppearance.BorderColor = Color.Black;
+            EditBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 157, 24);
             EditBtn.FlatStyle = FlatStyle.Flat;
             EditBtn.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             EditBtn.Location = new Point(322, 650);
@@ -271,10 +272,9 @@
             // 
             // DeleteBtn
             // 
-            DeleteBtn.BackColor = Color.White;
-            DeleteBtn.FlatAppearance.BorderColor = Color.SeaGreen;
-            DeleteBtn.FlatAppearance.BorderSize = 0;
-            DeleteBtn.FlatAppearance.MouseOverBackColor = Color.Red;
+            DeleteBtn.BackColor = Color.FromArgb(220, 53, 69);
+            DeleteBtn.FlatAppearance.BorderColor = Color.Black;
+            DeleteBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(200, 35, 51);
             DeleteBtn.FlatStyle = FlatStyle.Flat;
             DeleteBtn.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             DeleteBtn.Location = new Point(156, 725);
@@ -299,7 +299,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.ForeColor = Color.White;
+            label6.ForeColor = Color.FromArgb(248, 250, 252);
             label6.Location = new Point(249, 112);
             label6.Name = "label6";
             label6.Size = new Size(131, 40);
@@ -309,10 +309,11 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.ForeColor = Color.White;
+            label8.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.ForeColor = Color.FromArgb(248, 250, 252);
             label8.Location = new Point(489, 156);
             label8.Name = "label8";
-            label8.Size = new Size(121, 21);
+            label8.Size = new Size(189, 32);
             label8.TabIndex = 4;
             label8.Text = "Lista wydatków";
             // 

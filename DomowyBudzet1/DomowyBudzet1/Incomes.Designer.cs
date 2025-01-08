@@ -69,7 +69,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.ForeColor = Color.White;
+            label6.ForeColor = Color.FromArgb(248, 250, 252);
             label6.Location = new Point(249, 112);
             label6.Name = "label6";
             label6.Size = new Size(161, 40);
@@ -150,7 +150,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.ForeColor = Color.White;
+            label5.ForeColor = Color.FromArgb(248, 250, 252);
             label5.Location = new Point(162, 549);
             label5.Name = "label5";
             label5.Size = new Size(43, 21);
@@ -169,7 +169,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.ForeColor = Color.White;
+            label4.ForeColor = Color.FromArgb(248, 250, 252);
             label4.Location = new Point(162, 467);
             label4.Name = "label4";
             label4.Size = new Size(43, 21);
@@ -180,7 +180,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = Color.White;
+            label3.ForeColor = Color.FromArgb(248, 250, 252);
             label3.Location = new Point(162, 384);
             label3.Name = "label3";
             label3.Size = new Size(81, 21);
@@ -199,7 +199,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.White;
+            label2.ForeColor = Color.FromArgb(248, 250, 252);
             label2.Location = new Point(162, 299);
             label2.Name = "label2";
             label2.Size = new Size(69, 21);
@@ -217,11 +217,11 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.ForeColor = Color.White;
-            label8.Location = new Point(489, 156);
+            label8.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.ForeColor = Color.FromArgb(248, 250, 252);
+            label8.Location = new Point(489, 155);
             label8.Name = "label8";
-            label8.Size = new Size(137, 21);
+            label8.Size = new Size(213, 32);
             label8.TabIndex = 18;
             label8.Text = "Lista przychodów";
             // 
@@ -229,7 +229,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
+            label1.ForeColor = Color.FromArgb(248, 250, 252);
             label1.Location = new Point(162, 224);
             label1.Name = "label1";
             label1.Size = new Size(46, 21);
@@ -257,11 +257,11 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.Font = new Font("Segoe UI Semibold", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
             label7.ForeColor = Color.Black;
             label7.Location = new Point(16, 9);
             label7.Name = "label7";
-            label7.Size = new Size(200, 40);
+            label7.Size = new Size(190, 40);
             label7.TabIndex = 4;
             label7.Text = "SmartBudget";
             // 

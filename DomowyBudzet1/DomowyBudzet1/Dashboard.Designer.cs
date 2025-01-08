@@ -79,11 +79,11 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.Font = new Font("Segoe UI Semibold", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
             label7.ForeColor = Color.Black;
             label7.Location = new Point(16, 9);
             label7.Name = "label7";
-            label7.Size = new Size(200, 40);
+            label7.Size = new Size(190, 40);
             label7.TabIndex = 4;
             label7.Text = "SmartBudget";
             // 
@@ -192,7 +192,7 @@
             IncSum.AutoSize = true;
             IncSum.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             IncSum.ForeColor = Color.FromArgb(57, 153, 24);
-            IncSum.Location = new Point(95, 102);
+            IncSum.Location = new Point(79, 102);
             IncSum.Name = "IncSum";
             IncSum.Size = new Size(157, 21);
             IncSum.TabIndex = 7;
@@ -202,20 +202,19 @@
             // 
             panel4.BackColor = SystemColors.ButtonFace;
             panel4.Controls.Add(AmountTotal);
-            panel4.Controls.Add(label17);
             panel4.Controls.Add(pictureBox10);
             panel4.Controls.Add(ExpCount);
             panel4.Controls.Add(IncCount);
             panel4.Location = new Point(510, 320);
             panel4.Name = "panel4";
-            panel4.Size = new Size(334, 263);
+            panel4.Size = new Size(313, 263);
             panel4.TabIndex = 5;
             // 
             // AmountTotal
             // 
             AmountTotal.AutoSize = true;
             AmountTotal.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            AmountTotal.Location = new Point(68, 178);
+            AmountTotal.Location = new Point(83, 191);
             AmountTotal.Name = "AmountTotal";
             AmountTotal.Size = new Size(197, 21);
             AmountTotal.TabIndex = 8;
@@ -225,11 +224,11 @@
             // 
             label17.AutoSize = true;
             label17.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label17.Location = new Point(68, 13);
+            label17.Location = new Point(122, 91);
             label17.Name = "label17";
-            label17.Size = new Size(178, 32);
+            label17.Size = new Size(212, 32);
             label17.TabIndex = 6;
-            label17.Text = "Podsumowanie";
+            label17.Text = "Przegląd finansów";
             label17.TextAlign = ContentAlignment.TopCenter;
             // 
             // pictureBox10
@@ -301,7 +300,7 @@
             ExpSum.AutoSize = true;
             ExpSum.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             ExpSum.ForeColor = Color.Maroon;
-            ExpSum.Location = new Point(110, 102);
+            ExpSum.Location = new Point(90, 102);
             ExpSum.Name = "ExpSum";
             ExpSum.Size = new Size(143, 21);
             ExpSum.TabIndex = 7;
@@ -314,6 +313,7 @@
             BackColor = Color.SeaGreen;
             ClientSize = new Size(1296, 811);
             Controls.Add(panel5);
+            Controls.Add(label17);
             Controls.Add(panel4);
             Controls.Add(panel3);
             Controls.Add(panel2);
@@ -340,6 +340,7 @@
             panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
