@@ -81,22 +81,26 @@
             // 
             // ExpenseBtn
             // 
+            ExpenseBtn.BackColor = Color.FromArgb(255, 41, 41);
             ExpenseBtn.Cursor = Cursors.Hand;
             ExpenseBtn.Image = (Image)resources.GetObject("ExpenseBtn.Image");
-            ExpenseBtn.Location = new Point(12, 320);
+            ExpenseBtn.Location = new Point(12, 440);
             ExpenseBtn.Name = "ExpenseBtn";
             ExpenseBtn.Size = new Size(59, 55);
+            ExpenseBtn.SizeMode = PictureBoxSizeMode.CenterImage;
             ExpenseBtn.TabIndex = 7;
             ExpenseBtn.TabStop = false;
             ExpenseBtn.Click += ExpenseBtn_Click_1;
             // 
             // DashboardBtn
             // 
+            DashboardBtn.BackColor = Color.FromArgb(203, 163, 92);
             DashboardBtn.Cursor = Cursors.Hand;
             DashboardBtn.Image = (Image)resources.GetObject("DashboardBtn.Image");
             DashboardBtn.Location = new Point(12, 200);
             DashboardBtn.Name = "DashboardBtn";
             DashboardBtn.Size = new Size(59, 55);
+            DashboardBtn.SizeMode = PictureBoxSizeMode.CenterImage;
             DashboardBtn.TabIndex = 8;
             DashboardBtn.TabStop = false;
             DashboardBtn.Click += DashboardBtn_Click_1;
@@ -106,20 +110,23 @@
             LogoutBtn.BackColor = Color.Firebrick;
             LogoutBtn.Cursor = Cursors.Hand;
             LogoutBtn.Image = (Image)resources.GetObject("LogoutBtn.Image");
-            LogoutBtn.Location = new Point(12, 744);
+            LogoutBtn.Location = new Point(0, 744);
             LogoutBtn.Name = "LogoutBtn";
-            LogoutBtn.Size = new Size(59, 55);
+            LogoutBtn.Size = new Size(84, 67);
+            LogoutBtn.SizeMode = PictureBoxSizeMode.CenterImage;
             LogoutBtn.TabIndex = 1;
             LogoutBtn.TabStop = false;
             LogoutBtn.Click += LogoutBtn_Click;
             // 
             // IncomeBtn
             // 
+            IncomeBtn.BackColor = Color.FromArgb(92, 179, 56);
             IncomeBtn.Cursor = Cursors.Hand;
             IncomeBtn.Image = (Image)resources.GetObject("IncomeBtn.Image");
-            IncomeBtn.Location = new Point(12, 440);
+            IncomeBtn.Location = new Point(12, 320);
             IncomeBtn.Name = "IncomeBtn";
             IncomeBtn.Size = new Size(59, 55);
+            IncomeBtn.SizeMode = PictureBoxSizeMode.CenterImage;
             IncomeBtn.TabIndex = 9;
             IncomeBtn.TabStop = false;
             IncomeBtn.Click += IncomeBtn_Click_1;
@@ -158,7 +165,7 @@
             // 
             // NameTb
             // 
-            NameTb.BackColor = Color.FromArgb(183, 183, 183);
+            NameTb.BackColor = Color.WhiteSmoke;
             NameTb.BorderStyle = BorderStyle.FixedSingle;
             NameTb.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             NameTb.Location = new Point(162, 248);
@@ -178,6 +185,8 @@
             // 
             // AmountTb
             // 
+            AmountTb.BackColor = Color.WhiteSmoke;
+            AmountTb.BorderStyle = BorderStyle.FixedSingle;
             AmountTb.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             AmountTb.Location = new Point(162, 323);
             AmountTb.Name = "AmountTb";
@@ -196,6 +205,8 @@
             // 
             // CatTb
             // 
+            CatTb.BackColor = Color.WhiteSmoke;
+            CatTb.BorderStyle = BorderStyle.FixedSingle;
             CatTb.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             CatTb.Location = new Point(162, 408);
             CatTb.Name = "CatTb";
@@ -224,6 +235,8 @@
             // 
             // DescTb
             // 
+            DescTb.BackColor = Color.WhiteSmoke;
+            DescTb.BorderStyle = BorderStyle.FixedSingle;
             DescTb.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             DescTb.Location = new Point(162, 573);
             DescTb.Name = "DescTb";

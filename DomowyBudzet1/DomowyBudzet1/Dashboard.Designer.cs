@@ -43,10 +43,10 @@
             IncSum = new Label();
             panel4 = new Panel();
             AmountTotal = new Label();
-            label17 = new Label();
             pictureBox10 = new PictureBox();
             ExpCount = new Label();
             IncCount = new Label();
+            label17 = new Label();
             panel5 = new Panel();
             pictureBox1 = new PictureBox();
             label14 = new Label();
@@ -113,22 +113,26 @@
             // 
             // ExpenseBtn
             // 
+            ExpenseBtn.BackColor = Color.FromArgb(255, 41, 41);
             ExpenseBtn.Cursor = Cursors.Hand;
             ExpenseBtn.Image = (Image)resources.GetObject("ExpenseBtn.Image");
-            ExpenseBtn.Location = new Point(12, 320);
+            ExpenseBtn.Location = new Point(12, 440);
             ExpenseBtn.Name = "ExpenseBtn";
             ExpenseBtn.Size = new Size(59, 55);
+            ExpenseBtn.SizeMode = PictureBoxSizeMode.CenterImage;
             ExpenseBtn.TabIndex = 10;
             ExpenseBtn.TabStop = false;
             ExpenseBtn.Click += ExpenseBtn_Click_1;
             // 
             // DashboardBtn
             // 
+            DashboardBtn.BackColor = Color.FromArgb(203, 163, 92);
             DashboardBtn.Cursor = Cursors.Hand;
             DashboardBtn.Image = (Image)resources.GetObject("DashboardBtn.Image");
             DashboardBtn.Location = new Point(12, 200);
             DashboardBtn.Name = "DashboardBtn";
             DashboardBtn.Size = new Size(59, 55);
+            DashboardBtn.SizeMode = PictureBoxSizeMode.CenterImage;
             DashboardBtn.TabIndex = 11;
             DashboardBtn.TabStop = false;
             DashboardBtn.Click += DashboardBtn_Click_1;
@@ -138,20 +142,23 @@
             LogoutBtn.BackColor = Color.Firebrick;
             LogoutBtn.Cursor = Cursors.Hand;
             LogoutBtn.Image = (Image)resources.GetObject("LogoutBtn.Image");
-            LogoutBtn.Location = new Point(12, 744);
+            LogoutBtn.Location = new Point(0, 744);
             LogoutBtn.Name = "LogoutBtn";
-            LogoutBtn.Size = new Size(59, 55);
+            LogoutBtn.Size = new Size(84, 67);
+            LogoutBtn.SizeMode = PictureBoxSizeMode.CenterImage;
             LogoutBtn.TabIndex = 1;
             LogoutBtn.TabStop = false;
             LogoutBtn.Click += LogoutBtn_Click;
             // 
             // IncomeBtn
             // 
+            IncomeBtn.BackColor = Color.FromArgb(92, 179, 56);
             IncomeBtn.Cursor = Cursors.Hand;
             IncomeBtn.Image = (Image)resources.GetObject("IncomeBtn.Image");
-            IncomeBtn.Location = new Point(12, 440);
+            IncomeBtn.Location = new Point(12, 320);
             IncomeBtn.Name = "IncomeBtn";
             IncomeBtn.Size = new Size(59, 55);
+            IncomeBtn.SizeMode = PictureBoxSizeMode.CenterImage;
             IncomeBtn.TabIndex = 12;
             IncomeBtn.TabStop = false;
             IncomeBtn.Click += IncomeBtn_Click_1;
@@ -220,17 +227,6 @@
             AmountTotal.TabIndex = 8;
             AmountTotal.Text = "Aktualna ilość środków: zł";
             // 
-            // label17
-            // 
-            label17.AutoSize = true;
-            label17.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label17.Location = new Point(122, 91);
-            label17.Name = "label17";
-            label17.Size = new Size(212, 32);
-            label17.TabIndex = 6;
-            label17.Text = "Przegląd finansów";
-            label17.TextAlign = ContentAlignment.TopCenter;
-            // 
             // pictureBox10
             // 
             pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
@@ -261,6 +257,17 @@
             IncCount.Size = new Size(184, 21);
             IncCount.TabIndex = 7;
             IncCount.Text = "Łączna ilość przychodów:";
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label17.Location = new Point(122, 91);
+            label17.Name = "label17";
+            label17.Size = new Size(212, 32);
+            label17.TabIndex = 6;
+            label17.Text = "Przegląd finansów";
+            label17.TextAlign = ContentAlignment.TopCenter;
             // 
             // panel5
             // 
