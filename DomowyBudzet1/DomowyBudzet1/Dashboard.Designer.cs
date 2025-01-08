@@ -179,7 +179,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(76, 175, 80);
-            label1.Location = new Point(95, 13);
+            label1.Location = new Point(111, 23);
             label1.Name = "label1";
             label1.Size = new Size(125, 32);
             label1.TabIndex = 6;
@@ -188,20 +188,21 @@
             // pictureBox6
             // 
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(14, 84);
+            pictureBox6.Location = new Point(3, 3);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(59, 55);
+            pictureBox6.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox6.TabIndex = 1;
             pictureBox6.TabStop = false;
             // 
             // IncSum
             // 
             IncSum.AutoSize = true;
-            IncSum.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            IncSum.ForeColor = Color.FromArgb(57, 153, 24);
-            IncSum.Location = new Point(79, 102);
+            IncSum.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            IncSum.ForeColor = Color.FromArgb(62, 123, 39);
+            IncSum.Location = new Point(34, 102);
             IncSum.Name = "IncSum";
-            IncSum.Size = new Size(157, 21);
+            IncSum.Size = new Size(202, 25);
             IncSum.TabIndex = 7;
             IncSum.Text = "Suma przychodów: zł";
             // 
@@ -212,59 +213,60 @@
             panel4.Controls.Add(pictureBox10);
             panel4.Controls.Add(ExpCount);
             panel4.Controls.Add(IncCount);
-            panel4.Location = new Point(510, 320);
+            panel4.Location = new Point(532, 200);
             panel4.Name = "panel4";
-            panel4.Size = new Size(313, 263);
+            panel4.Size = new Size(319, 263);
             panel4.TabIndex = 5;
             // 
             // AmountTotal
             // 
             AmountTotal.AutoSize = true;
-            AmountTotal.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            AmountTotal.Location = new Point(83, 191);
+            AmountTotal.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            AmountTotal.Location = new Point(16, 190);
             AmountTotal.Name = "AmountTotal";
-            AmountTotal.Size = new Size(197, 21);
+            AmountTotal.Size = new Size(244, 25);
             AmountTotal.TabIndex = 8;
             AmountTotal.Text = "Aktualna ilość środków: zł";
             // 
             // pictureBox10
             // 
             pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
-            pictureBox10.Location = new Point(16, 84);
+            pictureBox10.Location = new Point(128, 16);
             pictureBox10.Name = "pictureBox10";
             pictureBox10.Size = new Size(59, 55);
+            pictureBox10.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox10.TabIndex = 1;
             pictureBox10.TabStop = false;
             // 
             // ExpCount
             // 
             ExpCount.AutoSize = true;
-            ExpCount.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            ExpCount.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             ExpCount.ForeColor = Color.Red;
-            ExpCount.Location = new Point(96, 120);
+            ExpCount.Location = new Point(16, 120);
             ExpCount.Name = "ExpCount";
-            ExpCount.Size = new Size(170, 21);
+            ExpCount.Size = new Size(218, 25);
             ExpCount.TabIndex = 7;
             ExpCount.Text = "Łączna ilość wydatków:";
             // 
             // IncCount
             // 
             IncCount.AutoSize = true;
-            IncCount.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            IncCount.ForeColor = Color.FromArgb(57, 153, 24);
-            IncCount.Location = new Point(96, 84);
+            IncCount.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            IncCount.ForeColor = Color.FromArgb(62, 123, 39);
+            IncCount.Location = new Point(16, 84);
             IncCount.Name = "IncCount";
-            IncCount.Size = new Size(184, 21);
+            IncCount.Size = new Size(236, 25);
             IncCount.TabIndex = 7;
             IncCount.Text = "Łączna ilość przychodów:";
             // 
             // label17
             // 
             label17.AutoSize = true;
-            label17.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label17.Location = new Point(122, 91);
+            label17.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            label17.Location = new Point(548, 104);
             label17.Name = "label17";
-            label17.Size = new Size(212, 32);
+            label17.Size = new Size(297, 45);
             label17.TabIndex = 6;
             label17.Text = "Przegląd finansów";
             label17.TextAlign = ContentAlignment.TopCenter;
@@ -275,7 +277,7 @@
             panel5.Controls.Add(pictureBox1);
             panel5.Controls.Add(label14);
             panel5.Controls.Add(ExpSum);
-            panel5.Location = new Point(926, 320);
+            panel5.Location = new Point(936, 320);
             panel5.Name = "panel5";
             panel5.Size = new Size(313, 263);
             panel5.TabIndex = 5;
@@ -284,9 +286,10 @@
             // 
             pictureBox1.Cursor = Cursors.Hand;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(25, 84);
+            pictureBox1.Location = new Point(3, 3);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(59, 55);
+            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox1.TabIndex = 10;
             pictureBox1.TabStop = false;
             pictureBox1.Click += ExpenseBtn_Click_1;
@@ -305,11 +308,11 @@
             // ExpSum
             // 
             ExpSum.AutoSize = true;
-            ExpSum.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            ExpSum.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             ExpSum.ForeColor = Color.Maroon;
             ExpSum.Location = new Point(90, 102);
             ExpSum.Name = "ExpSum";
-            ExpSum.Size = new Size(143, 21);
+            ExpSum.Size = new Size(184, 25);
             ExpSum.TabIndex = 7;
             ExpSum.Text = "Suma wydatków: zł";
             // 
