@@ -81,7 +81,7 @@
             // IncomeList
             // 
             IncomeList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            IncomeList.ColumnHeadersHeight = 5;
+            IncomeList.ColumnHeadersHeight = 30;
             IncomeList.Location = new Point(489, 190);
             IncomeList.Name = "IncomeList";
             IncomeList.RowTemplate.Height = 25;

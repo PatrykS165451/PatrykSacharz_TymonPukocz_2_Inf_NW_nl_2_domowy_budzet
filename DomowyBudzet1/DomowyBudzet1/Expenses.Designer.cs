@@ -51,10 +51,10 @@
             EditBtn = new Button();
             DeleteBtn = new Button();
             pictureBox6 = new PictureBox();
-            ExpenseList = new DataGridView();
             label6 = new Label();
             label8 = new Label();
             DateTb = new DateTimePicker();
+            ExpenseList = new DataGridView();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ExpenseBtn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)DashboardBtn).BeginInit();
@@ -90,6 +90,7 @@
             ExpenseBtn.Size = new Size(59, 55);
             ExpenseBtn.TabIndex = 7;
             ExpenseBtn.TabStop = false;
+            ExpenseBtn.Click += ExpenseBtn_Click_1;
             // 
             // DashboardBtn
             // 
@@ -99,6 +100,7 @@
             DashboardBtn.Size = new Size(59, 55);
             DashboardBtn.TabIndex = 8;
             DashboardBtn.TabStop = false;
+            DashboardBtn.Click += DashboardBtn_Click_1;
             // 
             // LogoutBtn
             // 
@@ -118,6 +120,7 @@
             IncomeBtn.Size = new Size(59, 55);
             IncomeBtn.TabIndex = 9;
             IncomeBtn.TabStop = false;
+            IncomeBtn.Click += IncomeBtn_Click_1;
             // 
             // pictureBox7
             // 
@@ -296,16 +299,6 @@
             pictureBox6.TabIndex = 1;
             pictureBox6.TabStop = false;
             // 
-            // ExpenseList
-            // 
-            ExpenseList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            ExpenseList.Location = new Point(489, 190);
-            ExpenseList.Name = "ExpenseList";
-            ExpenseList.RowTemplate.Height = 25;
-            ExpenseList.Size = new Size(795, 583);
-            ExpenseList.TabIndex = 6;
-            ExpenseList.CellContentClick += ExpenseList_CellContentClick;
-            // 
             // label6
             // 
             label6.AutoSize = true;
@@ -335,15 +328,27 @@
             DateTb.Size = new Size(247, 29);
             DateTb.TabIndex = 7;
             // 
+            // ExpenseList
+            // 
+            ExpenseList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            ExpenseList.ColumnHeadersHeight = 30;
+            ExpenseList.Location = new Point(489, 190);
+            ExpenseList.Name = "ExpenseList";
+            ExpenseList.RowTemplate.Height = 25;
+            ExpenseList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            ExpenseList.Size = new Size(795, 583);
+            ExpenseList.TabIndex = 34;
+            ExpenseList.CellContentClick += ExpenseList_CellContentClick_1;
+            // 
             // Expenses
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SeaGreen;
             ClientSize = new Size(1296, 811);
+            Controls.Add(ExpenseList);
             Controls.Add(DateTb);
             Controls.Add(label6);
-            Controls.Add(ExpenseList);
             Controls.Add(pictureBox6);
             Controls.Add(DeleteBtn);
             Controls.Add(EditBtn);
@@ -402,7 +407,6 @@
         private Button EditBtn;
         private Button DeleteBtn;
         private PictureBox pictureBox6;
-        private DataGridView ExpenseList;
         private Label label6;
         private PictureBox pictureBox7;
         private Label label7;
@@ -411,5 +415,6 @@
         private PictureBox DashboardBtn;
         private PictureBox IncomeBtn;
         private DateTimePicker DateTb;
+        private DataGridView ExpenseList;
     }
 }
