@@ -80,13 +80,14 @@
             // 
             // IncomeList
             // 
-            IncomeList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            IncomeList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            IncomeList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            IncomeList.ColumnHeadersHeight = 5;
             IncomeList.Location = new Point(489, 190);
             IncomeList.Name = "IncomeList";
             IncomeList.RowTemplate.Height = 25;
+            IncomeList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             IncomeList.Size = new Size(795, 583);
-            IncomeList.TabIndex = 25;
+            IncomeList.TabIndex = 33;
             IncomeList.CellContentClick += IncomeList_CellContentClick_1;
             // 
             // pictureBox6
