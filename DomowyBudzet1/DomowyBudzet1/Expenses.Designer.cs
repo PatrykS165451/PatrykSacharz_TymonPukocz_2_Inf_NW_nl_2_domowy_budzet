@@ -35,7 +35,6 @@
             LogoutBtn = new PictureBox();
             IncomeBtn = new PictureBox();
             pictureBox7 = new PictureBox();
-            pictureBox4 = new PictureBox();
             panel2 = new Panel();
             label7 = new Label();
             NameTb = new TextBox();
@@ -61,7 +60,6 @@
             ((System.ComponentModel.ISupportInitialize)LogoutBtn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)IncomeBtn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ExpenseList).BeginInit();
@@ -75,7 +73,6 @@
             panel1.Controls.Add(LogoutBtn);
             panel1.Controls.Add(IncomeBtn);
             panel1.Controls.Add(pictureBox7);
-            panel1.Controls.Add(pictureBox4);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
@@ -84,8 +81,9 @@
             // 
             // ExpenseBtn
             // 
+            ExpenseBtn.Cursor = Cursors.Hand;
             ExpenseBtn.Image = (Image)resources.GetObject("ExpenseBtn.Image");
-            ExpenseBtn.Location = new Point(12, 340);
+            ExpenseBtn.Location = new Point(12, 320);
             ExpenseBtn.Name = "ExpenseBtn";
             ExpenseBtn.Size = new Size(59, 55);
             ExpenseBtn.TabIndex = 7;
@@ -94,8 +92,9 @@
             // 
             // DashboardBtn
             // 
+            DashboardBtn.Cursor = Cursors.Hand;
             DashboardBtn.Image = (Image)resources.GetObject("DashboardBtn.Image");
-            DashboardBtn.Location = new Point(12, 110);
+            DashboardBtn.Location = new Point(12, 200);
             DashboardBtn.Name = "DashboardBtn";
             DashboardBtn.Size = new Size(59, 55);
             DashboardBtn.TabIndex = 8;
@@ -104,6 +103,8 @@
             // 
             // LogoutBtn
             // 
+            LogoutBtn.BackColor = Color.Firebrick;
+            LogoutBtn.Cursor = Cursors.Hand;
             LogoutBtn.Image = (Image)resources.GetObject("LogoutBtn.Image");
             LogoutBtn.Location = new Point(12, 744);
             LogoutBtn.Name = "LogoutBtn";
@@ -114,8 +115,9 @@
             // 
             // IncomeBtn
             // 
+            IncomeBtn.Cursor = Cursors.Hand;
             IncomeBtn.Image = (Image)resources.GetObject("IncomeBtn.Image");
-            IncomeBtn.Location = new Point(12, 456);
+            IncomeBtn.Location = new Point(12, 440);
             IncomeBtn.Name = "IncomeBtn";
             IncomeBtn.Size = new Size(59, 55);
             IncomeBtn.TabIndex = 9;
@@ -131,15 +133,6 @@
             pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox7.TabIndex = 1;
             pictureBox7.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(12, 224);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(59, 55);
-            pictureBox4.TabIndex = 1;
-            pictureBox4.TabStop = false;
             // 
             // panel2
             // 
@@ -251,6 +244,7 @@
             AddBtn.FlatAppearance.BorderSize = 0;
             AddBtn.FlatAppearance.MouseOverBackColor = Color.Silver;
             AddBtn.FlatStyle = FlatStyle.Flat;
+            AddBtn.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             AddBtn.Location = new Point(156, 650);
             AddBtn.Name = "AddBtn";
             AddBtn.Size = new Size(87, 48);
@@ -266,6 +260,7 @@
             EditBtn.FlatAppearance.BorderSize = 0;
             EditBtn.FlatAppearance.MouseOverBackColor = Color.Silver;
             EditBtn.FlatStyle = FlatStyle.Flat;
+            EditBtn.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             EditBtn.Location = new Point(322, 650);
             EditBtn.Name = "EditBtn";
             EditBtn.Size = new Size(87, 48);
@@ -281,6 +276,7 @@
             DeleteBtn.FlatAppearance.BorderSize = 0;
             DeleteBtn.FlatAppearance.MouseOverBackColor = Color.Red;
             DeleteBtn.FlatStyle = FlatStyle.Flat;
+            DeleteBtn.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             DeleteBtn.Location = new Point(156, 725);
             DeleteBtn.Name = "DeleteBtn";
             DeleteBtn.Size = new Size(253, 48);
@@ -322,8 +318,9 @@
             // 
             // DateTb
             // 
+            DateTb.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             DateTb.Format = DateTimePickerFormat.Short;
-            DateTb.Location = new Point(162, 504);
+            DateTb.Location = new Point(162, 491);
             DateTb.Name = "DateTb";
             DateTb.Size = new Size(247, 29);
             DateTb.TabIndex = 7;
@@ -377,7 +374,6 @@
             ((System.ComponentModel.ISupportInitialize)LogoutBtn).EndInit();
             ((System.ComponentModel.ISupportInitialize)IncomeBtn).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
@@ -390,7 +386,6 @@
 
         private Panel panel1;
         private PictureBox LogoutBtn;
-        private PictureBox pictureBox4;
         private Panel panel2;
         private TextBox NameTb;
         private Label label1;

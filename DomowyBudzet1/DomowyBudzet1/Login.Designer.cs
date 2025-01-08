@@ -130,6 +130,7 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.Cursor = Cursors.Hand;
             label3.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.Firebrick;
             label3.Location = new Point(849, 9);

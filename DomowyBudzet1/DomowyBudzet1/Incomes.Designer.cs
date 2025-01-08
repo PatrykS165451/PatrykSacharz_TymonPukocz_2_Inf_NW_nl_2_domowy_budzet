@@ -51,7 +51,6 @@
             ExpenseBtn = new PictureBox();
             LogoutBtn = new PictureBox();
             pictureBox7 = new PictureBox();
-            pictureBox4 = new PictureBox();
             DashboardBtn = new PictureBox();
             IncomeBtn = new PictureBox();
             DateTb = new DateTimePicker();
@@ -62,7 +61,6 @@
             ((System.ComponentModel.ISupportInitialize)ExpenseBtn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)LogoutBtn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)DashboardBtn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)IncomeBtn).BeginInit();
             SuspendLayout();
@@ -273,7 +271,6 @@
             panel1.Controls.Add(ExpenseBtn);
             panel1.Controls.Add(LogoutBtn);
             panel1.Controls.Add(pictureBox7);
-            panel1.Controls.Add(pictureBox4);
             panel1.Controls.Add(DashboardBtn);
             panel1.Controls.Add(IncomeBtn);
             panel1.Dock = DockStyle.Left;
@@ -284,8 +281,9 @@
             // 
             // ExpenseBtn
             // 
+            ExpenseBtn.Cursor = Cursors.Hand;
             ExpenseBtn.Image = (Image)resources.GetObject("ExpenseBtn.Image");
-            ExpenseBtn.Location = new Point(12, 342);
+            ExpenseBtn.Location = new Point(12, 320);
             ExpenseBtn.Name = "ExpenseBtn";
             ExpenseBtn.Size = new Size(59, 55);
             ExpenseBtn.TabIndex = 1;
@@ -294,6 +292,8 @@
             // 
             // LogoutBtn
             // 
+            LogoutBtn.BackColor = Color.Firebrick;
+            LogoutBtn.Cursor = Cursors.Hand;
             LogoutBtn.Image = (Image)resources.GetObject("LogoutBtn.Image");
             LogoutBtn.Location = new Point(12, 744);
             LogoutBtn.Name = "LogoutBtn";
@@ -312,19 +312,11 @@
             pictureBox7.TabIndex = 1;
             pictureBox7.TabStop = false;
             // 
-            // pictureBox4
-            // 
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(12, 224);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(59, 55);
-            pictureBox4.TabIndex = 1;
-            pictureBox4.TabStop = false;
-            // 
             // DashboardBtn
             // 
+            DashboardBtn.Cursor = Cursors.Hand;
             DashboardBtn.Image = (Image)resources.GetObject("DashboardBtn.Image");
-            DashboardBtn.Location = new Point(12, 112);
+            DashboardBtn.Location = new Point(12, 200);
             DashboardBtn.Name = "DashboardBtn";
             DashboardBtn.Size = new Size(59, 55);
             DashboardBtn.TabIndex = 1;
@@ -333,8 +325,9 @@
             // 
             // IncomeBtn
             // 
+            IncomeBtn.Cursor = Cursors.Hand;
             IncomeBtn.Image = (Image)resources.GetObject("IncomeBtn.Image");
-            IncomeBtn.Location = new Point(12, 458);
+            IncomeBtn.Location = new Point(12, 440);
             IncomeBtn.Name = "IncomeBtn";
             IncomeBtn.Size = new Size(59, 55);
             IncomeBtn.TabIndex = 1;
@@ -343,10 +336,11 @@
             // 
             // DateTb
             // 
+            DateTb.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             DateTb.Format = DateTimePickerFormat.Short;
             DateTb.Location = new Point(162, 491);
             DateTb.Name = "DateTb";
-            DateTb.Size = new Size(247, 23);
+            DateTb.Size = new Size(247, 29);
             DateTb.TabIndex = 26;
             // 
             // Incomes
@@ -386,7 +380,6 @@
             ((System.ComponentModel.ISupportInitialize)ExpenseBtn).EndInit();
             ((System.ComponentModel.ISupportInitialize)LogoutBtn).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)DashboardBtn).EndInit();
             ((System.ComponentModel.ISupportInitialize)IncomeBtn).EndInit();
             ResumeLayout(false);
@@ -417,7 +410,6 @@
         private PictureBox ExpenseBtn;
         private PictureBox LogoutBtn;
         private PictureBox pictureBox7;
-        private PictureBox pictureBox4;
         private PictureBox DashboardBtn;
         private PictureBox IncomeBtn;
         private DateTimePicker DateTb;
