@@ -3,8 +3,9 @@ Projekt aplikacji do śledzenia zarobków i wydatków osobistych, stworzony w j�
 ## Funkcje
 1. Dodawanie wpisów przychodów i wydatków
 2. Zapisywanie wpisów w pliku bazy danych
-3. Obliczanie bilansu dochodów
-4. Wyświetlanie łącznej liczby wpisów obu kategorii
+3. Edycja i usuwanie istniejących wpisów
+4. Obliczanie bilansu dochodów
+5. Wyświetlanie łącznej liczby wpisów obu kategorii
 
 ## Wymagania
 - **.NET 6.0 lub nowszy**
@@ -14,3 +15,7 @@ Projekt aplikacji do śledzenia zarobków i wydatków osobistych, stworzony w j�
 1. Pobierz kod źródłowy oraz plik bazy danych z repozytorium
 2. Skonfiguruj *connection string* tak, aby wskazywał na lokalizację pliku bazy danych w twoim komputerze
 3. Skompiluj i uruchom aplikację
+
+   
+## Diagram UML
+![UML](./Images/UML_Diagram.png)
