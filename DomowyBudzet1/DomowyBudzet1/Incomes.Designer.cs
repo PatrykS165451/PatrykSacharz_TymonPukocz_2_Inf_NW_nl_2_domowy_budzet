@@ -115,9 +115,9 @@
             // 
             // EditBtn
             // 
-            EditBtn.BackColor = Color.FromArgb(235, 131, 23);
+            EditBtn.BackColor = Color.FromArgb(255, 157, 24);
             EditBtn.FlatAppearance.BorderColor = Color.Black;
-            EditBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 157, 24);
+            EditBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(235, 131, 23);
             EditBtn.FlatStyle = FlatStyle.Flat;
             EditBtn.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             EditBtn.Location = new Point(322, 650);
