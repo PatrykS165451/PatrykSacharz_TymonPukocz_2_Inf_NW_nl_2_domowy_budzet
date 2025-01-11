@@ -31,7 +31,7 @@ namespace DomowyBudzet1
                 DataTable dt = Con.GetData(Query);
                 if (dt.Rows.Count > 0)
                 {
-                    ExpSum.Text = "Łączna suma wydatków: " + dt.Rows[0][0].ToString() + " zł";
+                    ExpSum.Text = dt.Rows[0][0].ToString() + " zł";
                 }
                 else
                 {
@@ -52,7 +52,7 @@ namespace DomowyBudzet1
                 DataTable dt = Con.GetData(Query);
                 if (dt.Rows.Count > 0)
                 {
-                    IncSum.Text = "Łączna suma przychodów: " + dt.Rows[0][0].ToString() + " zł";
+                    IncSum.Text = dt.Rows[0][0].ToString() + " zł";
                 }
                 else
                 {
@@ -93,20 +93,37 @@ namespace DomowyBudzet1
             }
         }
 
+
+        /* Inc=sum(IncAmt)
+            Exp=sum(ExpAmt)
+            res=Inc-Exp
+            print res*/
+
         private void CountTotal()
         {
             try
             {
-                string Query = "select sum(IncAmt) - sum(ExpAmt) from IncomeTbl, ExpenseTbl";
-                DataTable dt = Con.GetData(Query);
-                if (dt.Rows.Count > 0)
+                // Zapytanie do obliczenia sumy przychodów
+                string incomeQuery = "select sum(IncAmt) from IncomeTbl";
+                DataTable incomeDt = Con.GetData(incomeQuery);
+                decimal totalIncome = 0;
+                if (incomeDt.Rows.Count > 0 && incomeDt.Rows[0][0] != DBNull.Value)
                 {
-                    AmountTotal.Text = "Aktualna ilość środków: " + dt.Rows[0][0].ToString() + " zł";
+                    totalIncome = Convert.ToDecimal(incomeDt.Rows[0][0]);
                 }
-                else
+
+                // Zapytanie do obliczenia sumy wydatków
+                string expenseQuery = "select sum(ExpAmt) from ExpenseTbl";
+                DataTable expenseDt = Con.GetData(expenseQuery);
+                decimal totalExpense = 0;
+                if (expenseDt.Rows.Count > 0 && expenseDt.Rows[0][0] != DBNull.Value)
                 {
-                    AmountTotal.Text = "Aktualna ilość środków: 0 zł";
+                    totalExpense = Convert.ToDecimal(expenseDt.Rows[0][0]);
                 }
+
+                // Obliczenie różnicy
+                decimal totalAmount = totalIncome - totalExpense;
+                AmountTotal.Text = totalAmount.ToString() + " zł";
             }
             catch (Exception ex)
             {

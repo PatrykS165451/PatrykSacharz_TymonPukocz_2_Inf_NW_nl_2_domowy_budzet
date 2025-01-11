@@ -40,6 +40,7 @@
             panel3 = new Panel();
             label1 = new Label();
             pictureBox6 = new PictureBox();
+            label3 = new Label();
             IncSum = new Label();
             panel4 = new Panel();
             AmountTotal = new Label();
@@ -50,7 +51,9 @@
             panel5 = new Panel();
             pictureBox1 = new PictureBox();
             label14 = new Label();
+            label2 = new Label();
             ExpSum = new Label();
+            label4 = new Label();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             panel1.SuspendLayout();
@@ -168,6 +171,7 @@
             panel3.BackColor = SystemColors.ButtonFace;
             panel3.Controls.Add(label1);
             panel3.Controls.Add(pictureBox6);
+            panel3.Controls.Add(label3);
             panel3.Controls.Add(IncSum);
             panel3.Location = new Point(129, 320);
             panel3.Name = "panel3";
@@ -179,7 +183,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(76, 175, 80);
-            label1.Location = new Point(111, 23);
+            label1.Location = new Point(101, 13);
             label1.Name = "label1";
             label1.Size = new Size(125, 32);
             label1.TabIndex = 6;
@@ -195,20 +199,32 @@
             pictureBox6.TabIndex = 1;
             pictureBox6.TabStop = false;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.FromArgb(62, 123, 39);
+            label3.Location = new Point(59, 102);
+            label3.Name = "label3";
+            label3.Size = new Size(182, 25);
+            label3.TabIndex = 7;
+            label3.Text = "Suma przychodów:";
+            // 
             // IncSum
             // 
             IncSum.AutoSize = true;
             IncSum.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             IncSum.ForeColor = Color.FromArgb(62, 123, 39);
-            IncSum.Location = new Point(34, 102);
+            IncSum.Location = new Point(59, 138);
             IncSum.Name = "IncSum";
-            IncSum.Size = new Size(202, 25);
+            IncSum.Size = new Size(27, 25);
             IncSum.TabIndex = 7;
-            IncSum.Text = "Suma przychodów: zł";
+            IncSum.Text = "zł";
             // 
             // panel4
             // 
             panel4.BackColor = SystemColors.ButtonFace;
+            panel4.Controls.Add(label4);
             panel4.Controls.Add(AmountTotal);
             panel4.Controls.Add(pictureBox10);
             panel4.Controls.Add(ExpCount);
@@ -222,11 +238,11 @@
             // 
             AmountTotal.AutoSize = true;
             AmountTotal.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            AmountTotal.Location = new Point(16, 190);
+            AmountTotal.Location = new Point(16, 212);
             AmountTotal.Name = "AmountTotal";
-            AmountTotal.Size = new Size(244, 25);
+            AmountTotal.Size = new Size(27, 25);
             AmountTotal.TabIndex = 8;
-            AmountTotal.Text = "Aktualna ilość środków: zł";
+            AmountTotal.Text = "zł";
             // 
             // pictureBox10
             // 
@@ -276,6 +292,7 @@
             panel5.BackColor = SystemColors.ButtonFace;
             panel5.Controls.Add(pictureBox1);
             panel5.Controls.Add(label14);
+            panel5.Controls.Add(label2);
             panel5.Controls.Add(ExpSum);
             panel5.Location = new Point(936, 320);
             panel5.Name = "panel5";
@@ -305,16 +322,37 @@
             label14.TabIndex = 7;
             label14.Text = "Wydatki";
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.Maroon;
+            label2.Location = new Point(64, 102);
+            label2.Name = "label2";
+            label2.Size = new Size(164, 25);
+            label2.TabIndex = 7;
+            label2.Text = "Suma wydatków:";
+            // 
             // ExpSum
             // 
             ExpSum.AutoSize = true;
             ExpSum.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             ExpSum.ForeColor = Color.Maroon;
-            ExpSum.Location = new Point(90, 102);
+            ExpSum.Location = new Point(64, 138);
             ExpSum.Name = "ExpSum";
-            ExpSum.Size = new Size(184, 25);
+            ExpSum.Size = new Size(27, 25);
             ExpSum.TabIndex = 7;
-            ExpSum.Text = "Suma wydatków: zł";
+            ExpSum.Text = "zł";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(16, 178);
+            label4.Name = "label4";
+            label4.Size = new Size(224, 25);
+            label4.TabIndex = 8;
+            label4.Text = "Aktualna ilość środków:";
             // 
             // Dashboard
             // 
@@ -377,5 +415,8 @@
         private PictureBox pictureBox1;
         private Label ExpCount;
         private Label AmountTotal;
+        private Label label3;
+        private Label label2;
+        private Label label4;
     }
 }
