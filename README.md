@@ -1,5 +1,6 @@
 # PatrykSacharz_TymonPukocz_2_Inf_NW_nl_2_domowy_budzet
 Projekt aplikacji do śledzenia zarobków i wydatków osobistych, stworzony w języku C# z użyciem .NET, WinForms dla GUI oraz MS SQL Server dla obsługi bazy danych.
+![Dashboard](./Images/DomowyBudzet_2.png)
 ## Funkcje
 1. Dodawanie wpisów przychodów i wydatków
 2. Zapisywanie wpisów w pliku bazy danych
@@ -11,11 +12,13 @@ Projekt aplikacji do śledzenia zarobków i wydatków osobistych, stworzony w j�
 - **.NET 6.0 lub nowszy**
 - **Microsoft Visual Studio 2022**
 - **System operacyjny Windows**
+
 ## Instalacja
 1. Pobierz kod źródłowy oraz plik bazy danych z repozytorium
 2. Skonfiguruj *connection string* tak, aby wskazywał na lokalizację pliku bazy danych w twoim komputerze
 3. Skompiluj i uruchom aplikację
 
+## Implementacja OOP (WIP)
    
-## Diagram UML
+## Diagram UML (WIP)
 ![UML](./Images/UML_Diagram.png)
