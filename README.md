@@ -9,7 +9,7 @@ Projekt aplikacji do śledzenia zarobków i wydatków osobistych, stworzony w j�
 
 ## Wymagania
 - **.NET 6.0 lub nowszy**
-- **Microsoft Visual Studio**
+- **Microsoft Visual Studio 2022**
 - **System operacyjny Windows**
 ## Instalacja
 1. Pobierz kod źródłowy oraz plik bazy danych z repozytorium
