@@ -12,56 +12,23 @@ namespace DomowyBudzet1
 {
     public partial class Dashboard : Form
     {
-        private readonly BaseFormHelper helper;
+        private IFinancialSummary _financialSummary;  // Deklaracja zmiennej typu interfejsu
 
         public Dashboard()
         {
             InitializeComponent();
-            helper = new BaseFormHelper();
-            SumExpenses();
-            SumIncomes();
-            CountExpenses();
-            CountIncomes();
-            CountTotal();
+            _financialSummary = new FinancialSummary();  // Używamy interfejsu, a nie konkretnej klasy
+            LoadFinancialData();  // Ładowanie danych do interfejsu użytkownika
         }
 
-        private void SumExpenses()
+        private void LoadFinancialData()
         {
-            string query = "select sum(ExpAmt) from ExpenseTbl";
-            helper.SumData(query, ExpSum, "zł");
-        }
-
-        private void SumIncomes()
-        {
-            string query = "select sum(IncAmt) from IncomeTbl";
-            helper.SumData(query, IncSum, "zł");
-        }
-
-        private void CountExpenses()
-        {
-            string query = "select count(*) from ExpenseTbl";
-            helper.CountData(query, ExpCount, "Łączna ilość wydatków: ");
-        }
-
-        private void CountIncomes()
-        {
-            string query = "select count(*) from IncomeTbl";
-            helper.CountData(query, IncCount, "Łączna ilość przychodów: ");
-        }
-
-        private void CountTotal()
-        {
-            try
-            {
-                decimal totalIncome = helper.GetSum("select sum(IncAmt) from IncomeTbl");
-                decimal totalExpense = helper.GetSum("select sum(ExpAmt) from ExpenseTbl");
-                decimal totalAmount = totalIncome - totalExpense;
-                AmountTotal.Text = totalAmount.ToString() + " zł";
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Błąd podczas pobierania danych: " + ex.Message);
-            }
+            // Używamy metod interfejsu do uzyskania danych
+            ExpSum.Text = _financialSummary.GetTotalExpenses();
+            IncSum.Text = _financialSummary.GetTotalIncomes();
+            AmountTotal.Text = _financialSummary.GetTotalAmount();
+            ExpCount.Text = _financialSummary.CountExpenses();
+            IncCount.Text = _financialSummary.CountIncomes();
         }
 
         private void LogoutBtn_Click(object sender, EventArgs e)
