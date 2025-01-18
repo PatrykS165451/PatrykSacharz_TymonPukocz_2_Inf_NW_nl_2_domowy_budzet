@@ -375,6 +375,7 @@
             // 
             // DateTb
             // 
+            DateTb.CustomFormat = "";
             DateTb.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             DateTb.Format = DateTimePickerFormat.Short;
             DateTb.Location = new Point(162, 491);

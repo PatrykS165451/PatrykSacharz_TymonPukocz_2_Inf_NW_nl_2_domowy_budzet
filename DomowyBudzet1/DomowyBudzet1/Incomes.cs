@@ -87,8 +87,10 @@ namespace DomowyBudzet1
                     int Amt = Convert.ToInt32(AmtTb.Text);
                     string Category = CatTb.Text;
                     string Description = DescTb.Text;
+                    DateTime dateTime = DateTb.Value.Date;
+                    string formatDate = dateTime.ToString("MM/dd/yyyy");
                     string Query = "insert into IncomeTbl values('{0}','{1}','{2}','{3}','{4}')";
-                    Query = string.Format(Query, IName, Amt, Category, DateTb.Value.Date, Description);
+                    Query = string.Format(Query, IName, Amt, Category, formatDate, Description);
                     Con.SetData(Query);
                     MessageBox.Show("Dodano pomyślnie.");
                     ShowIncomes();
@@ -133,8 +135,10 @@ namespace DomowyBudzet1
                     int Amt = Convert.ToInt32(AmtTb.Text);
                     string Category = CatTb.Text;
                     string Description = DescTb.Text;
+                    DateTime dateTime = DateTb.Value.Date;
+                    string formatDate = dateTime.ToString("MM/dd/yyyy");
                     string Query = "update IncomeTbl set IncName = '{0}',IncAmt = '{1}',IncCat = '{2}',IncDate = '{3}',IncDesc = '{4}' where IncId = '{5}'";
-                    Query = string.Format(Query, IName, Amt, Category, DateTb.Value.Date, Description, key);
+                    Query = string.Format(Query, IName, Amt, Category, formatDate, Description, key);
                     Con.SetData(Query);
                     MessageBox.Show("Zedytowano pomyślnie.");
                     ShowIncomes();

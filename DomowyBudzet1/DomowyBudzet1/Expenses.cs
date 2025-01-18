@@ -55,8 +55,10 @@ namespace DomowyBudzet1
                     int Amt = Convert.ToInt32(AmountTb.Text);
                     string Category = CatTb.Text;
                     string Description = DescTb.Text;
+                    DateTime dateTime = DateTb.Value.Date;
+                    string formatDate = dateTime.ToString("MM/dd/yyyy");
                     string Query = "insert into ExpenseTbl values('{0}','{1}','{2}','{3}','{4}')";
-                    Query = string.Format(Query, EName, Amt, Category, DateTb.Value.Date, Description);
+                    Query = string.Format(Query, EName, Amt, Category, formatDate, Description);
                     Con.SetData(Query);
                     MessageBox.Show("Dodano pomyœlnie.");
                     ShowExpenses();
@@ -100,8 +102,10 @@ namespace DomowyBudzet1
                     int Amt = Convert.ToInt32(AmountTb.Text);
                     string Category = CatTb.Text;
                     string Description = DescTb.Text;
+                    DateTime dateTime = DateTb.Value.Date;
+                    string formatDate = dateTime.ToString("MM/dd/yyyy");
                     string Query = "update ExpenseTbl set ExpName = '{0}',ExpAmt = '{1}',ExpCat = '{2}',ExpDate = '{3}',ExpDesc = '{4}' where ExpId = '{5}'";
-                    Query = string.Format(Query, IName, Amt, Category, DateTb.Value.Date, Description, Key);
+                    Query = string.Format(Query, IName, Amt, Category, formatDate, Description, Key);
                     Con.SetData(Query);
                     MessageBox.Show("Zedytowano pomyœlnie.");
                     ShowExpenses();
